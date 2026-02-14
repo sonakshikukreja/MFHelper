@@ -1,0 +1,26 @@
+{
+    "api": {
+        "base_url": "https://api.mfapi.in"
+    },
+    "smtp": {
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "user": "",
+        "pass": "",
+        "from": ""
+    },
+    "reporting": {
+        "to_emails": [],
+        "scheme_limit": null,
+        "staleness_days": 5
+    },
+    "persistence": {
+        "chunk_size": 5000,
+        "nav_data_dir": "NAVData",
+        "reports_dir": "Reports",
+        "logs_dir": "Logs"
+    },
+    "ai": {
+        "gemini_api_key": ""
+    }
+}

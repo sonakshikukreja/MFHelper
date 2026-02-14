@@ -1,0 +1,5 @@
+requests
+pandas
+numpy
+numpy_financial
+jinja2

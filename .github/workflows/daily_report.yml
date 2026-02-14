@@ -1,0 +1,56 @@
+name: Daily Mutual Fund Report
+
+on:
+  schedule:
+    - cron: '30 2 * * *'        # Runs daily at 2:30 AM UTC (8:00 AM IST)
+  workflow_dispatch:            # Allows manual trigger from GitHub UI
+
+permissions:
+  contents: write               # Required for gh-pages deployment
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'          # Caches pip dependencies for faster runs
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas requests jinja2 numpy
+
+      - name: Generate Daily Report
+        env:
+          # Configuration secrets to be added in GitHub Repository Settings
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+          REPORT_RECIPIENTS: ${{ secrets.REPORT_RECIPIENTS }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Alternatively, you can just use the full JSON config as a secret:
+          # APP_CONFIG_JSON: ${{ secrets.APP_CONFIG_JSON }}
+        run: python daily_mf_report.py
+
+      - name: Prepare for Deployment
+        run: |
+          # Copy the latest generated report to index.html for easy viewing on GitHub Pages
+          LATEST_REPORT=$(ls -t Reports/report_*.html | head -n 1)
+          cp "$LATEST_REPORT" Reports/index.html
+          echo "Latest report $LATEST_REPORT copied to Reports/index.html"
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./Reports
+          publish_branch: gh-pages
+          force_orphan: true    # Keeps only the latest report in the history of gh-pages branch
