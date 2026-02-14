@@ -4,8 +4,7 @@ import sys
 import requests, os, math, json
 import pandas as pd
 import numpy as np
-from datetime import datetime, timedelta
-from datetime import datetime, timedelta, UTC
+from datetime import datetime, timedelta, timezone
 from email.mime.text import MIMEText
 import smtplib
 from jinja2 import Template
@@ -667,7 +666,7 @@ def process_scheme(session, scheme, as_of):
         return None
 
 def main():
-    as_of = pd.to_datetime(datetime.utcnow())
+    as_of = pd.to_datetime(datetime.now(timezone.utc))
     
     # Initialize Session with Connection Pooling
     session = requests.Session()
