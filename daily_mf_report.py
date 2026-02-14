@@ -154,13 +154,9 @@ def fetch_all_schemes(session):
 
 # Fetch NAV history for a scheme code using date range (1 year)
 def fetch_nav_history(session, scheme_code, as_of_date):
-    # Calculate 1 year ago from as_of_date
-    # MFAPI expects dd-mm-yyyy format
-    start_date = (as_of_date - pd.DateOffset(years=1)).strftime('%d-%m-%Y')
-    end_date = as_of_date.strftime('%d-%m-%Y')
-    
-    # Use date range API to get only 1 year of data
-    url = f"{MFAPI_BASE}/mf/{scheme_code}?startDate={start_date}&endDate={end_date}"
+    # MFAPI does NOT support startDate/endDate filtering on the endpoint (returns 500)
+    # We fetch the full history and filter locally.
+    url = f"{MFAPI_BASE}/mf/{scheme_code}"
     resp = session.get(url)
     resp.raise_for_status()
     data = resp.json()
@@ -174,10 +170,16 @@ def fetch_nav_history(session, scheme_code, as_of_date):
     navs['nav'] = pd.to_numeric(navs['nav'], errors='coerce')
     navs = navs.dropna(subset=['nav'])
     
-    # Filter out zero or negative NAVs to handle schemes with missing/zero historical data
+    # Filter out zero or negative NAVs
     navs = navs[navs['nav'] > 0]
     
+    # Filter for last 1 year locally
+    start_boundary = as_of_date - pd.DateOffset(years=1)
+    # Ensure both are naive for comparison
+    navs = navs[(navs['date'] >= start_boundary) & (navs['date'] <= as_of_date)]
+    
     if navs.empty:
+        # logging.debug(f"No data for {scheme_code} in the last year (Window: {start_boundary} to {as_of_date})")
         return None
     
     navs = navs.sort_values('date').reset_index(drop=True)
@@ -663,7 +665,9 @@ def process_scheme(session, scheme, as_of):
             "prev_year_nav_date": nav_data.get('start_date')
         }
     except Exception as e:
-        # logging.debug(f"Error processing {code}: {e}") 
+        # Log first few errors to diagnose issues in CI/CD without flooding
+        error_msg = str(e)
+        logging.error(f"Error processing {code} ({name}): {error_msg}")
         return None
 
 def main():
@@ -680,6 +684,14 @@ def main():
     schemes = fetch_all_schemes(session)
     results = []
     
+    # Diagnostic test for a single known active scheme
+    test_scheme = {"schemeCode": 102885, "schemeName": "SBI Bluechip Test"}
+    test_res = process_scheme(session, test_scheme, as_of)
+    if test_res:
+        logging.info(f"DIAGNOSTIC SUCCESS: SBI Bluechip processed correctly. XIRR: {test_res['xirr']}")
+    else:
+        logging.error("DIAGNOSTIC FAILURE: SBI Bluechip could not be processed. Pipeline logic is broken.")
+
     # Process all schemes by default, or use scheme_limit if set
     limit_val = CONFIG["reporting"]["scheme_limit"]
     limit = int(limit_val) if limit_val else len(schemes)
