@@ -445,7 +445,7 @@ EMAIL_TEMPLATE = """
         <div class="header">
             <h1>Daily Mutual Fund Analysis</h1>
             <div class="meta">
-                <span>Date: <strong>{{date}}</strong></span>
+                <span>Timestamp: <strong>{{ist_time}}</strong></span>
                 <span class="status-badge">Multi-Category Performance Report</span>
             </div>
         </div>
@@ -517,7 +517,7 @@ EMAIL_TEMPLATE = """
                 {{ group.title }}
             </summary>
             <div class="table-container">
-                <table>
+                <table class="data-table">
                     <thead>
                         <tr>
                             <th style="width: 50px;">#</th>
@@ -613,9 +613,17 @@ EMAIL_TEMPLATE = """
             }
         }
 
-        askBtn.addEventListener('click', askGemini);
-        promptInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') askGemini();
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            if (askBtn) {
+                askBtn.addEventListener('click', askGemini);
+                console.log("AI Assistant initialized.");
+            }
+            if (promptInput) {
+                promptInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') askGemini();
+                });
+            }
         });
     </script>
 </body>
@@ -672,7 +680,9 @@ def process_scheme(session, scheme, as_of):
 
 def main():
     # MFAPI data is naive, so we use a naive UTC date for consistent comparison
-    as_of = pd.to_datetime(datetime.now(timezone.utc).replace(tzinfo=None))
+    now_utc = datetime.now(timezone.utc)
+    as_of = pd.to_datetime(now_utc.replace(tzinfo=None))
+    ist_timestamp = (now_utc + timedelta(hours=5, minutes=30)).strftime('%d-%b-%Y %I:%M %p IST')
     
     # Initialize Session with Connection Pooling
     session = requests.Session()
@@ -682,6 +692,11 @@ def main():
     
     logging.info("Fetching scheme list...")
     schemes = fetch_all_schemes(session)
+    
+    # Filter out Regular funds (case-insensitive)
+    schemes = [s for s in schemes if "regular" not in s['schemeName'].lower()]
+    logging.info(f"Filtered to {len(schemes)} schemes (excluding regular funds).")
+    
     results = []
     
     # Diagnostic test for a single known active scheme
@@ -806,6 +821,7 @@ def main():
 
     html = Template(EMAIL_TEMPLATE).render(
         date=as_of.date(), 
+        ist_time=ist_timestamp,
         groups=groups, 
         top_n=top_200_groups,
         gemini_key=CONFIG.get("ai", {}).get("gemini_api_key", "")
