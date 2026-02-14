@@ -155,8 +155,9 @@ def fetch_all_schemes(session):
 # Fetch NAV history for a scheme code using date range (1 year)
 def fetch_nav_history(session, scheme_code, as_of_date):
     # Calculate 1 year ago from as_of_date
-    start_date = (as_of_date - pd.DateOffset(years=1)).strftime('%Y-%m-%d')
-    end_date = as_of_date.strftime('%Y-%m-%d')
+    # MFAPI expects dd-mm-yyyy format
+    start_date = (as_of_date - pd.DateOffset(years=1)).strftime('%d-%m-%Y')
+    end_date = as_of_date.strftime('%d-%m-%Y')
     
     # Use date range API to get only 1 year of data
     url = f"{MFAPI_BASE}/mf/{scheme_code}?startDate={start_date}&endDate={end_date}"
@@ -666,7 +667,8 @@ def process_scheme(session, scheme, as_of):
         return None
 
 def main():
-    as_of = pd.to_datetime(datetime.now(timezone.utc))
+    # MFAPI data is naive, so we use a naive UTC date for consistent comparison
+    as_of = pd.to_datetime(datetime.now(timezone.utc).replace(tzinfo=None))
     
     # Initialize Session with Connection Pooling
     session = requests.Session()
