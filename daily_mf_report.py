@@ -70,9 +70,6 @@ def load_config():
         default_config["reporting"]["to_emails"] = [e.strip() for e in os.getenv("REPORT_RECIPIENTS").split(",")]
     if os.getenv("SCHEME_LIMIT"): 
         default_config["reporting"]["scheme_limit"] = os.getenv("SCHEME_LIMIT")
-    if os.getenv("SCHEME_LIMIT"): 
-        default_config["reporting"]["scheme_limit"] = os.getenv("SCHEME_LIMIT")
-    
     return default_config
 
 CONFIG = load_config()
@@ -149,6 +146,144 @@ def fetch_all_schemes(session):
     return all_schemes  # list of {"schemeName","schemeCode"}
 
 # Fetch NAV history for a scheme code using date range (1 year)
+# --- Kuvera Client for Scheme Details ---
+class KuveraClient:
+    def __init__(self, session, reports_dir):
+        self.session = session
+        self.base_url = "https://mf.captnemo.in/kuvera"
+        self.details_dir = os.path.join(reports_dir, "Details")
+        if not os.path.exists(self.details_dir):
+            os.makedirs(self.details_dir)
+
+    def fetch_details(self, isin):
+        if not isin:
+            return None
+        try:
+            url = f"{self.base_url}/{isin}"
+            resp = self.session.get(url, timeout=10)
+            if resp.status_code == 200:
+                data = resp.json()
+                # API returns list of funds directly
+                if isinstance(data, list) and data:
+                    return data[0]
+                elif isinstance(data, dict):
+                    # Handle case where it might be a dict with 'data' key or root object
+                    funds = data.get("data")
+                    if isinstance(funds, list) and funds:
+                        return funds[0]
+                    return data if data.get("isin") or data.get("ISIN") else None
+            return None
+        except Exception as e:
+            logging.error(f"Error fetching Kuvera details for {isin}: {e}")
+            return None
+
+    def generate_detail_page(self, isin):
+        if not isin:
+            return None
+        filepath = os.path.join(self.details_dir, f"{isin}.html")
+        # Relative path for the link in the main report
+        rel_path = f"Details/{isin}.html"
+        
+        if os.path.exists(filepath):
+            return rel_path
+            
+        details = self.fetch_details(isin)
+        if not details:
+            return None
+            
+        template_str = """
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ details.name }} - Details</title>
+    <style>
+        body { font-family: 'Outfit', sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 40px auto; padding: 20px; background-color: #f8fafc; }
+        .card { background: #fff; padding: 40px; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        h1 { color: #1e293b; margin-top: 0; font-size: 28px; border-bottom: 3px solid #3b82f6; padding-bottom: 12px; }
+        h2 { color: #334155; font-size: 20px; margin-top: 30px; border-left: 5px solid #3b82f6; padding-left: 12px; }
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin: 25px 0; }
+        .meta-item { background: #f1f5f9; padding: 18px; border-radius: 10px; border: 1px solid #e2e8f0; }
+        .label { font-size: 11px; color: #64748b; text-transform: uppercase; font-weight: 800; display: block; letter-spacing: 0.05em; margin-bottom: 4px; }
+        .value { font-size: 17px; color: #0f172a; font-weight: 700; }
+        .objective { background: #fdfdfd; padding: 25px; border-radius: 10px; font-style: italic; border: 1px dashed #cbd5e1; color: #475569; }
+        .returns-table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 20px 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; }
+        .returns-table th, .returns-table td { padding: 14px 20px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        .returns-table th { background-color: #f1f5f9; color: #475569; font-weight: 700; }
+        .returns-table tr:last-child td { border-bottom: none; }
+        .positive { color: #10b981; font-weight: 800; }
+        .negative { color: #ef4444; font-weight: 800; }
+        .btn-back { display: inline-block; margin-top: 35px; padding: 12px 24px; background: linear-gradient(135deg, #3b82f6, #2563eb); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); transition: all 0.3s; }
+        .btn-back:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3); }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <h1>{{ details.name }}</h1>
+        
+        <div class="meta-grid">
+            <div class="meta-item">
+                <span class="label">ISIN</span>
+                <span class="value">{{ details.isin or details.ISIN }}</span>
+            </div>
+            <div class="meta-item">
+                <span class="label">Fund Manager</span>
+                <span class="value">{{ details.fund_manager or 'N/A' }}</span>
+            </div>
+            <div class="meta-item">
+                <span class="label">Expense Ratio</span>
+                <span class="value">{{ details.expense_ratio }}%</span>
+            </div>
+            <div class="meta-item">
+                <span class="label">AUM</span>
+                <span class="value">₹{{ "{:,.2f}".format(details.aum) if details.aum else 'N/A' }} Cr</span>
+            </div>
+        </div>
+
+        <h2>Investment Objective</h2>
+        <div class="objective">
+            {{ details.investment_objective }}
+        </div>
+
+        <h2>Performance Returns</h2>
+        <table class="returns-table">
+            <thead>
+                <tr>
+                    <th>Period</th>
+                    <th>Return (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% set ret = details.returns %}
+                <tr><td>1 Week</td><td class="{{ 'positive' if ret.week_1|float > 0 else 'negative' }}">{{ ret.week_1 }}%</td></tr>
+                <tr><td>1 Year</td><td class="{{ 'positive' if ret.year_1|float > 0 else 'negative' }}">{{ ret.year_1 }}%</td></tr>
+                <tr><td>3 Year</td><td class="{{ 'positive' if ret.year_3|float > 0 else 'negative' }}">{{ ret.year_3 }}%</td></tr>
+                <tr><td>5 Year</td><td class="{{ 'positive' if ret.year_5|float > 0 else 'negative' }}">{{ ret.year_5 }}%</td></tr>
+                <tr><td>Inception</td><td class="{{ 'positive' if ret.inception|float > 0 else 'negative' }}">{{ ret.inception }}%</td></tr>
+            </tbody>
+        </table>
+
+        <a href="../{{ report_filename }}" class="btn-back">← Back to Main Report</a>
+    </div>
+</body>
+</html>
+"""
+        try:
+            template = Template(template_str)
+            # Find the main report filename to link back properly
+            # In main(), it's usually index.html or daily_report_...html
+            # We'll pass it in later or assume a standard name. 
+            # For now, let's use a placeholder or generic link.
+            report_filename = "index.html" 
+            html_content = template.render(details=details, report_filename=report_filename)
+            with open(filepath, "w", encoding="utf-8") as f:
+                f.write(html_content)
+            return rel_path
+        except Exception as e:
+            logging.error(f"Error generating detail page for {isin}: {e}")
+            return None
+
 def fetch_nav_history(session, scheme_code, as_of_date):
     # MFAPI does NOT support startDate/endDate filtering on the endpoint (returns 500)
     # We fetch the full history and filter locally.
@@ -414,6 +549,7 @@ EMAIL_TEMPLATE = """
                     <tr>
                         <th style="width: 50px;">#</th>
                         <th>Scheme Name</th>
+                        <th>Info</th>
                         <th>Category</th>
                         <th style="text-align: right;">Months</th>
                         <th style="text-align: right;">12M XIRR</th>
@@ -425,6 +561,14 @@ EMAIL_TEMPLATE = """
                         <td style="color: var(--text-muted); font-weight: 600;">{{ loop.index }}</td>
                         <td>
                             <span class="scheme-name">{{ row.schemeName }}</span>
+                        </td>
+                        <td>
+                            {% if row.isin_growth_link %}
+                                <a href="{{ row.isin_growth_link }}" target="_blank" style="text-decoration: none; font-size: 10px; padding: 2px 4px; background: #eff6ff; color: #2563eb; border-radius: 4px; border: 1px solid #dbeafe; font-weight: 700;">G</a>
+                            {% endif %}
+                            {% if row.isin_div_link %}
+                                <a href="{{ row.isin_div_link }}" target="_blank" style="text-decoration: none; font-size: 10px; padding: 2px 4px; background: #fef2f2; color: #dc2626; border-radius: 4px; border: 1px solid #fee2e2; font-weight: 700;">D</a>
+                            {% endif %}
                         </td>
                         <td>
                             <span class="category-tag">{{ row.scheme_category }}</span>
@@ -461,6 +605,7 @@ EMAIL_TEMPLATE = """
                         <tr>
                             <th style="width: 50px;">#</th>
                             <th>Scheme Name</th>
+                            <th>Info</th>
                             <th style="text-align: right;">Months</th>
                             <th style="text-align: right;">12M XIRR</th>
                         </tr>
@@ -471,6 +616,14 @@ EMAIL_TEMPLATE = """
                             <td style="color: var(--text-muted); font-weight: 600;">{{ loop.index }}</td>
                             <td>
                                 <span class="scheme-name">{{ row.schemeName }}</span>
+                            </td>
+                            <td>
+                                {% if row.isin_growth_link %}
+                                    <a href="{{ row.isin_growth_link }}" target="_blank" style="text-decoration: none; font-size: 10px; padding: 2px 4px; background: #eff6ff; color: #2563eb; border-radius: 4px; border: 1px solid #dbeafe; font-weight: 700;">G</a>
+                                {% endif %}
+                                {% if row.isin_div_link %}
+                                    <a href="{{ row.isin_div_link }}" target="_blank" style="text-decoration: none; font-size: 10px; padding: 2px 4px; background: #fef2f2; color: #dc2626; border-radius: 4px; border: 1px solid #fee2e2; font-weight: 700;">D</a>
+                                {% endif %}
                             </td>
                             <td style="text-align: right; font-weight: 500;">{{ row.months }}m</td>
                             <td style="text-align: right;">
@@ -510,7 +663,7 @@ def send_email_smtp(subject, html_body):
     s.quit()
 
 # Helper function to process a single scheme
-def process_scheme(session, scheme, as_of):
+def process_scheme(session, scheme, as_of, kuvera_client=None):
     code = scheme['schemeCode']
     name = scheme['schemeName']
     
@@ -548,7 +701,14 @@ def process_scheme(session, scheme, as_of):
         # Minimum duration filter: remove if months < 5
         if months < 5:
             return None
-        
+
+        # Generate local ISIN detail pages
+        growth_link = None
+        div_link = None
+        if kuvera_client:
+            growth_link = kuvera_client.generate_detail_page(isin_g)
+            div_link = kuvera_client.generate_detail_page(isin_d)
+
         return {
             "schemeCode": code,
             "schemeName": name,
@@ -558,7 +718,9 @@ def process_scheme(session, scheme, as_of):
             "scheme_type": meta.get("scheme_type"),
             "scheme_category": meta.get("scheme_category"),
             "isin_growth": isin_g,
+            "isin_growth_link": growth_link,
             "isin_div_reinvestment": isin_d,
+            "isin_div_link": div_link,
             "latest_nav": nav_data.get('end_nav'),
             "latest_nav_date": end_date,
             "prev_year_nav": nav_data.get('start_nav'),
@@ -582,6 +744,12 @@ def main():
     session.mount("https://", adapter)
     session.mount("http://", adapter)
     
+    reports_dir = CONFIG["persistence"]["reports_dir"]
+    if not os.path.exists(reports_dir):
+        os.makedirs(reports_dir)
+        
+    kuvera_client = KuveraClient(session, reports_dir)
+    
     logging.info("Fetching scheme list...")
     schemes = fetch_all_schemes(session)
     
@@ -591,14 +759,6 @@ def main():
     
     results = []
     
-    # Diagnostic test for a single known active scheme
-    test_scheme = {"schemeCode": 102885, "schemeName": "SBI Bluechip Test"}
-    test_res = process_scheme(session, test_scheme, as_of)
-    if test_res:
-        logging.info(f"DIAGNOSTIC SUCCESS: SBI Bluechip processed correctly. XIRR: {test_res['xirr']}")
-    else:
-        logging.error("DIAGNOSTIC FAILURE: SBI Bluechip could not be processed. Pipeline logic is broken.")
-
     # Process all schemes by default, or use scheme_limit if set
     limit_val = CONFIG["reporting"]["scheme_limit"]
     limit = int(limit_val) if limit_val else len(schemes)
@@ -608,7 +768,7 @@ def main():
     
     with concurrent.futures.ThreadPoolExecutor(max_workers=25) as executor:
         # Submit all tasks
-        future_to_scheme = {executor.submit(process_scheme, session, s, as_of): s for s in schemes_to_process}
+        future_to_scheme = {executor.submit(process_scheme, session, s, as_of, kuvera_client): s for s in schemes_to_process}
         
         completed = 0
         for future in concurrent.futures.as_completed(future_to_scheme):
