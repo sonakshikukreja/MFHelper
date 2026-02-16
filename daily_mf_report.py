@@ -215,17 +215,42 @@ class KuveraClient:
         .negative { color: #ef4444; font-weight: 800; }
         .btn-back { display: inline-block; margin-top: 35px; padding: 12px 24px; background: linear-gradient(135deg, #3b82f6, #2563eb); color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2); transition: all 0.3s; }
         .btn-back:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3); }
+        .kv-section-title { margin-top: 36px; font-size: 20px; color: #1e293b; }
+        .kv-subtitle { margin-top: 20px; font-size: 15px; color: #475569; }
+        .kv-label { font-weight: 600; color: #64748b; width: 35%; }
+        .kv-value { color: #0f172a; }
+        .kv-inner-table { margin: 0; border: none; }
+        .meta-item-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+        .action-btn { display: inline-block; padding: 6px 14px; border-radius: 9999px; font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+        .action-btn-invest { background: #16a34a; color: #ffffff; }
+        .action-btn-divest { background: #dc2626; color: #ffffff; }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="card">
+        {% set lump_available = details.get('Lump Available') or details.get('lump_available') or details.get('lumpsum_available') %}
+        {% set sip_available = details.get('Sip Available') or details.get('sip_available') %}
+        {% set can_invest = (lump_available|string).upper() == 'Y' or (sip_available|string).upper() == 'Y' %}
+        {% set comparison = details.get('comparison') or details.get('Comparison') %}
+        {% set nav_info = details.get('nav') or details.get('Nav') or details.get('NAV') %}
         <h1>{{ details.name }}</h1>
         
         <div class="meta-grid">
             <div class="meta-item">
-                <span class="label">ISIN</span>
-                <span class="value">{{ details.isin or details.ISIN }}</span>
+                <div class="meta-item-top">
+                    <div>
+                        <span class="label">ISIN</span>
+                        <span class="value">{{ details.isin or details.ISIN }}</span>
+                    </div>
+                    <div>
+                        {% if can_invest %}
+                        <span class="action-btn action-btn-invest">INVEST</span>
+                        {% else %}
+                        <span class="action-btn action-btn-divest">DIVEST</span>
+                        {% endif %}
+                    </div>
+                </div>
             </div>
             <div class="meta-item">
                 <span class="label">Fund Manager</span>
@@ -239,6 +264,15 @@ class KuveraClient:
                 <span class="label">AUM</span>
                 <span class="value">₹{{ "{:,.2f}".format(details.aum) if details.aum else 'N/A' }} Cr</span>
             </div>
+            {% if nav_info %}
+            <div class="meta-item">
+                <span class="label">Last NAV</span>
+                <span class="value">
+                    ₹{% if nav_info.nav is not none %}{{ "%.4f"|format(nav_info.nav|float) }}{% else %}N/A{% endif %}
+                    {% if nav_info.date %} on {{ nav_info.date }}{% endif %}
+                </span>
+            </div>
+            {% endif %}
         </div>
 
         <h2>Investment Objective</h2>
@@ -263,8 +297,40 @@ class KuveraClient:
                 <tr><td>Inception</td><td class="{{ 'positive' if ret.inception|float > 0 else 'negative' }}">{{ ret.inception }}%</td></tr>
             </tbody>
         </table>
-
-        <a href="../{{ report_filename }}" class="btn-back">← Back to Main Report</a>
+        
+        {% if comparison and comparison is sequence and not (comparison is string) and comparison|length > 0 %}
+        <h2 class="kv-section-title">Comparison</h2>
+        <table class="returns-table">
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    {% for mf in comparison %}
+                    <th>MF {{ loop.index }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% set first = comparison[0] %}
+                {% if first is mapping %}
+                    {% for metric, _ in first|dictsort %}
+                    <tr>
+                        <td class="kv-label">{{ metric.replace('_', ' ')|title }}</td>
+                        {% for mf in comparison %}
+                        <td class="kv-value">{{ mf.get(metric, '') }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td class="kv-label">Value</td>
+                        {% for mf in comparison %}
+                        <td class="kv-value">{{ mf }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+        {% endif %}
     </div>
 </body>
 </html>
