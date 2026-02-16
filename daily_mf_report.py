@@ -34,9 +34,6 @@ def load_config():
             "nav_data_dir": "NAVData",
             "reports_dir": "Reports",
             "logs_dir": "Logs"
-        },
-        "ai": {
-            "gemini_api_key": os.getenv("GEMINI_API_KEY")
         }
     }
     
@@ -73,9 +70,8 @@ def load_config():
         default_config["reporting"]["to_emails"] = [e.strip() for e in os.getenv("REPORT_RECIPIENTS").split(",")]
     if os.getenv("SCHEME_LIMIT"): 
         default_config["reporting"]["scheme_limit"] = os.getenv("SCHEME_LIMIT")
-    if os.getenv("GEMINI_API_KEY"):
-        if "ai" not in default_config: default_config["ai"] = {}
-        default_config["ai"]["gemini_api_key"] = os.getenv("GEMINI_API_KEY")
+    if os.getenv("SCHEME_LIMIT"): 
+        default_config["reporting"]["scheme_limit"] = os.getenv("SCHEME_LIMIT")
     
     return default_config
 
@@ -388,55 +384,8 @@ EMAIL_TEMPLATE = """
             text-align: center;
             font-weight: 500;
         }
-        .ai-container {
-            background: #f0f9ff;
-            border: 1px solid #bae6fd;
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 32px;
-        }
-        .ai-title {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 700;
-            color: #0369a1;
-            margin-bottom: 12px;
-        }
-        .ai-input-group {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-        #ai-prompt {
-            flex: 1;
-            padding: 12px 16px;
-            border: 1px solid #cbd5e1;
-            border-radius: 8px;
-            font-family: inherit;
-            font-size: 14px;
-        }
-        #ask-ai-btn {
-            background: #0ea5e9;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-        #ask-ai-btn:disabled { opacity: 0.5; cursor: not-allowed; }
-        #ai-response {
-            background: white;
-            padding: 16px;
-            border-radius: 8px;
-            border: 1px solid #e2e8f0;
-            font-size: 14px;
-            color: var(--text-main);
-            min-height: 60px;
-            display: none;
-            white-space: pre-wrap;
+        tr:hover {
+            background-color: #f8fafc;
         }
     </style>
 </head>
@@ -454,53 +403,43 @@ EMAIL_TEMPLATE = """
             ⚠️ <strong>Disclaimer:</strong> This report is for educational purposes only. Past performance is not indicative of future results. Please consult a qualified financial advisor before making any investment decisions.
         </div>
 
-        <div class="ai-container">
-            <div class="ai-title">✨ AI Insights (Gemini)</div>
-            <div class="ai-input-group">
-                <input type="text" id="ai-prompt" placeholder="Ask AI about this report (e.g., 'What are the top 3 small cap funds?')...">
-                <button id="ask-ai-btn">Ask AI</button>
-            </div>
-            <div id="ai-response"></div>
-        </div>
-
         {% if top_n %}
         <div class="section-header" style="margin-top: 0;">
             <span style="font-size: 18px; font-weight: 700; color: var(--primary);">🏆 Overall Top 200 Performance</span>
         </div>
         
-        {% for group in top_n %}
-        <details>
-            <summary>
-                {{ group.title }}
-            </summary>
-            <div class="table-container">
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 50px;">#</th>
-                            <th>Scheme Name</th>
-                            <th style="text-align: right;">12M XIRR</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for row in group.rows %}
-                        <tr>
-                            <td style="color: var(--text-muted); font-weight: 600;">{{ loop.index }}</td>
-                            <td>
-                                <span class="scheme-name">{{ row.schemeName }}</span>
-                            </td>
-                            <td style="text-align: right;">
-                                <span class="xirr-val {{ 'positive' if row.xirr > 0 else '' }}">
-                                    {{ "%.2f"|format(row.xirr * 100) if row.xirr is not none else 'n/a' }}%
-                                </span>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </details>
-        {% endfor %}
+        <div class="table-container" style="background: white; border-radius: 12px; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); border: 1px solid #e2e8f0; margin-bottom: 24px;">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">#</th>
+                        <th>Scheme Name</th>
+                        <th>Category</th>
+                        <th style="text-align: right;">Months</th>
+                        <th style="text-align: right;">12M XIRR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in top_n %}
+                    <tr>
+                        <td style="color: var(--text-muted); font-weight: 600;">{{ loop.index }}</td>
+                        <td>
+                            <span class="scheme-name">{{ row.schemeName }}</span>
+                        </td>
+                        <td>
+                            <span class="category-tag">{{ row.scheme_category }}</span>
+                        </td>
+                        <td style="text-align: right; font-weight: 500;">{{ row.months }}m</td>
+                        <td style="text-align: right;">
+                            <span class="xirr-val {{ 'positive' if row.xirr > 0 else '' }}">
+                                {{ "%.2f"|format(row.xirr * 100) if row.xirr is not none else 'n/a' }}%
+                            </span>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
         {% endif %}
 
         <div class="section-header">
@@ -522,6 +461,7 @@ EMAIL_TEMPLATE = """
                         <tr>
                             <th style="width: 50px;">#</th>
                             <th>Scheme Name</th>
+                            <th style="text-align: right;">Months</th>
                             <th style="text-align: right;">12M XIRR</th>
                         </tr>
                     </thead>
@@ -532,6 +472,7 @@ EMAIL_TEMPLATE = """
                             <td>
                                 <span class="scheme-name">{{ row.schemeName }}</span>
                             </td>
+                            <td style="text-align: right; font-weight: 500;">{{ row.months }}m</td>
                             <td style="text-align: right;">
                                 <span class="xirr-val {{ 'positive' if row.xirr > 0 else '' }}">
                                     {{ "%.2f"|format(row.xirr * 100) if row.xirr is not none else 'n/a' }}%
@@ -551,80 +492,7 @@ EMAIL_TEMPLATE = """
     </div>
 
     <script>
-        const API_KEY = "{{ gemini_key }}";
-        const promptInput = document.getElementById('ai-prompt');
-        const askBtn = document.getElementById('ask-ai-btn');
-        const responseDiv = document.getElementById('ai-response');
-
-        async function askGemini() {
-            const prompt = promptInput.value.trim();
-            if (!prompt) return;
-            if (!API_KEY || API_KEY === "YOUR_GEMINI_API_KEY_HERE") {
-                responseDiv.style.display = 'block';
-                responseDiv.innerHTML = "❌ Error: Gemini API key not configured in config.json.";
-                return;
-            }
-
-            askBtn.disabled = true;
-            askBtn.innerText = "Thinking...";
-            responseDiv.style.display = 'block';
-            responseDiv.innerHTML = "⏳ Analyzing report data...";
-
-            // Extract context from tables
-            let context = "Mutual Fund Report Data Summary:\n";
-            document.querySelectorAll('.data-table').forEach(table => {
-                const category = table.closest('details')?.querySelector('summary')?.innerText.trim() || "Table";
-                context += `\nCategory: ${category}\n`;
-                const rows = Array.from(table.querySelectorAll('tbody tr')).slice(0, 50); // Limit context size
-                rows.forEach(row => {
-                    const cells = row.querySelectorAll('td');
-                    if (cells.length >= 3) {
-                        const name = cells[1].innerText.trim();
-                        const xirr = cells[2].innerText.trim();
-                        context += `- ${name}: ${xirr}\n`;
-                    }
-                });
-            });
-
-            try {
-                const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        contents: [{
-                            parts: [{
-                                text: `Context: ${context}\n\nUser Question: ${prompt}\n\nStrictly use the provided mutual fund data to answer. If the answer isn't in the data, say you don't know.`
-                            }]
-                        }]
-                    })
-                });
-
-                const data = await response.json();
-                if (data.candidates && data.candidates[0].content.parts[0].text) {
-                    responseDiv.innerHTML = data.candidates[0].content.parts[0].text;
-                } else {
-                    responseDiv.innerHTML = "Sorry, I couldn't generate an analysis. Please check your prompt or API key.";
-                }
-            } catch (error) {
-                responseDiv.innerHTML = "❌ Error calling Gemini API: " + error.message;
-            } finally {
-                askBtn.disabled = false;
-                askBtn.innerText = "Ask AI";
-            }
-        }
-
-        // Initialize when DOM is ready
-        document.addEventListener('DOMContentLoaded', () => {
-            if (askBtn) {
-                askBtn.addEventListener('click', askGemini);
-                console.log("AI Assistant initialized.");
-            }
-            if (promptInput) {
-                promptInput.addEventListener('keypress', (e) => {
-                    if (e.key === 'Enter') askGemini();
-                });
-            }
-        });
+        // No JavaScript required for static report
     </script>
 </body>
 </html>
@@ -645,6 +513,12 @@ def send_email_smtp(subject, html_body):
 def process_scheme(session, scheme, as_of):
     code = scheme['schemeCode']
     name = scheme['schemeName']
+    
+    # IDCW/Dividend Filter: remove if name contains "IDCW", "Income Distribution", or "Payout"
+    # to focus strictly on Growth plans.
+    lower_name = name.lower()
+    if "idcw" in lower_name or "income distribution" in lower_name:
+        return None
     try:
         nav_data = fetch_nav_history(session, code, as_of)
         if not nav_data:
@@ -658,19 +532,37 @@ def process_scheme(session, scheme, as_of):
         xirr = compute_lumpsum_xirr(nav_data)
         meta = nav_data.get('meta', {})
         
+        # Strict ISIN filter: remove if both isin_growth and isin_div_reinvestment are null/empty
+        isin_g = meta.get("isin_growth")
+        isin_d = meta.get("isin_div_reinvestment")
+        if not isin_g and not isin_d:
+            return None
+
+        # Calculate months between start and end date (round up)
+        start_date = nav_data.get('start_date')
+        end_date = nav_data.get('end_date')
+        months = (end_date.year - start_date.year) * 12 + (end_date.month - start_date.month)
+        if end_date.day > start_date.day:
+            months += 1
+            
+        # Minimum duration filter: remove if months < 5
+        if months < 5:
+            return None
+        
         return {
             "schemeCode": code,
             "schemeName": name,
             "xirr": xirr,
+            "months": months,
             "fund_house": meta.get("fund_house"),
             "scheme_type": meta.get("scheme_type"),
             "scheme_category": meta.get("scheme_category"),
-            "isin_growth": meta.get("isin_growth"),
-            "isin_div_reinvestment": meta.get("isin_div_reinvestment"),
+            "isin_growth": isin_g,
+            "isin_div_reinvestment": isin_d,
             "latest_nav": nav_data.get('end_nav'),
-            "latest_nav_date": nav_data.get('end_date'),
+            "latest_nav_date": end_date,
             "prev_year_nav": nav_data.get('start_nav'),
-            "prev_year_nav_date": nav_data.get('start_date')
+            "prev_year_nav_date": start_date
         }
     except Exception as e:
         # Log first few errors to diagnose issues in CI/CD without flooding
@@ -792,16 +684,8 @@ def main():
         if c.startswith('debt'): return (3, cat_name)
         return (4, cat_name)
 
-    # Get Top 200 Overall and group by category
-    top_200_df = df.head(200)
-    top_200_groups = []
-    for s_cat, group_df in top_200_df.groupby('scheme_category', dropna=False, sort=False):
-        top_200_groups.append({
-            "title": str(s_cat) if s_cat else "General",
-            "rows": group_df.to_dict(orient='records')
-        })
-    # Sort Top 200 groups by priority
-    top_200_groups.sort(key=lambda x: get_category_priority(x['title']))
+    # Get Top 200 Overall as a flat list
+    top_200_records = df.head(200).to_dict(orient='records')
     
     groups = []
     # Identify unique categories (ignoring scheme_type in title)
@@ -823,8 +707,7 @@ def main():
         date=as_of.date(), 
         ist_time=ist_timestamp,
         groups=groups, 
-        top_n=top_200_groups,
-        gemini_key=CONFIG.get("ai", {}).get("gemini_api_key", "")
+        top_n=top_200_records
     )
     
     # Create Reports directory if not exists
