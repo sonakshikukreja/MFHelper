@@ -179,17 +179,24 @@ class KuveraClient:
 
     def generate_detail_page(self, isin):
         if not isin:
-            return None
+            return None, None
         filepath = os.path.join(self.details_dir, f"{isin}.html")
         # Relative path for the link in the main report
         rel_path = f"Details/{isin}.html"
         
-        if os.path.exists(filepath):
-            return rel_path
-            
         details = self.fetch_details(isin)
         if not details:
-            return None
+            if os.path.exists(filepath):
+                return rel_path, None
+            return None, None
+        
+        # Determine can_invest status from Kuvera data
+        lump_available = details.get('Lump Available') or details.get('lump_available') or details.get('lumpsum_available')
+        sip_available = details.get('Sip Available') or details.get('sip_available')
+        can_invest = str(lump_available).upper() == 'Y' or str(sip_available).upper() == 'Y'
+        
+        if os.path.exists(filepath):
+            return rel_path, can_invest
             
         template_str = """
 <!DOCTYPE html>
@@ -345,10 +352,10 @@ class KuveraClient:
             html_content = template.render(details=details, report_filename=report_filename)
             with open(filepath, "w", encoding="utf-8") as f:
                 f.write(html_content)
-            return rel_path
+            return rel_path, can_invest
         except Exception as e:
             logging.error(f"Error generating detail page for {isin}: {e}")
-            return None
+            return None, None
 
 def fetch_nav_history(session, scheme_code, as_of_date):
     # MFAPI does NOT support startDate/endDate filtering on the endpoint (returns 500)
@@ -568,6 +575,24 @@ EMAIL_TEMPLATE = """
             padding: 2px 8px;
             border-radius: 4px;
         }
+        .action-btn {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-left: 4px;
+        }
+        .action-btn-invest {
+            background: #16a34a;
+            color: #ffffff;
+        }
+        .action-btn-divest {
+            background: #dc2626;
+            color: #ffffff;
+        }
         .footer {
             margin-top: 32px;
             text-align: center;
@@ -635,6 +660,11 @@ EMAIL_TEMPLATE = """
                             {% if row.isin_div_link %}
                                 <a href="{{ row.isin_div_link }}" target="_blank" style="text-decoration: none; font-size: 10px; padding: 2px 4px; background: #fef2f2; color: #dc2626; border-radius: 4px; border: 1px solid #fee2e2; font-weight: 700;">D</a>
                             {% endif %}
+                            {% if row.can_invest_growth == true %}
+                                <span class="action-btn action-btn-invest">INVEST</span>
+                            {% elif row.can_invest_growth == false %}
+                                <span class="action-btn action-btn-divest">DIVEST</span>
+                            {% endif %}
                         </td>
                         <td>
                             <span class="category-tag">{{ row.scheme_category }}</span>
@@ -689,6 +719,11 @@ EMAIL_TEMPLATE = """
                                 {% endif %}
                                 {% if row.isin_div_link %}
                                     <a href="{{ row.isin_div_link }}" target="_blank" style="text-decoration: none; font-size: 10px; padding: 2px 4px; background: #fef2f2; color: #dc2626; border-radius: 4px; border: 1px solid #fee2e2; font-weight: 700;">D</a>
+                                {% endif %}
+                                {% if row.can_invest_growth == true %}
+                                    <span class="action-btn action-btn-invest">INVEST</span>
+                                {% elif row.can_invest_growth == false %}
+                                    <span class="action-btn action-btn-divest">DIVEST</span>
                                 {% endif %}
                             </td>
                             <td style="text-align: right; font-weight: 500;">{{ row.months }}m</td>
@@ -771,9 +806,11 @@ def process_scheme(session, scheme, as_of, kuvera_client=None):
         # Generate local ISIN detail pages
         growth_link = None
         div_link = None
+        can_invest_g = None
+        can_invest_d = None
         if kuvera_client:
-            growth_link = kuvera_client.generate_detail_page(isin_g)
-            div_link = kuvera_client.generate_detail_page(isin_d)
+            growth_link, can_invest_g = kuvera_client.generate_detail_page(isin_g)
+            div_link, can_invest_d = kuvera_client.generate_detail_page(isin_d)
 
         return {
             "schemeCode": code,
@@ -785,8 +822,10 @@ def process_scheme(session, scheme, as_of, kuvera_client=None):
             "scheme_category": meta.get("scheme_category"),
             "isin_growth": isin_g,
             "isin_growth_link": growth_link,
+            "can_invest_growth": can_invest_g,
             "isin_div_reinvestment": isin_d,
             "isin_div_link": div_link,
+            "can_invest_div": can_invest_d,
             "latest_nav": nav_data.get('end_nav'),
             "latest_nav_date": end_date,
             "prev_year_nav": nav_data.get('start_nav'),
@@ -899,6 +938,10 @@ def main():
     
     # --- Grouping Logic: Top 20 per Scheme Type & Category ---
     df = df.dropna(subset=['xirr'])
+    
+    # Exclude unwanted categories: Debt, ELSS, IDF, Income
+    exclude_keywords = ['debt', 'elss', 'idf', 'income']
+    df = df[~df['scheme_category'].str.lower().str.contains('|'.join(exclude_keywords), na=False)]
     
     # Sort globally by XIRR first
     df = df.sort_values(by='xirr', ascending=False)
