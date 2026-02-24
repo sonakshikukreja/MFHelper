@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Manager | MFHelper</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --success: #10b981;
+            --error: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-align: center;
+            background: linear-gradient(to right, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
+            font-family: inherit;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+            background: rgba(15, 23, 42, 0.8);
+        }
+
+        .input-group {
+            display: flex;
+            gap: 12px;
+        }
+
+        .input-group input {
+            flex: 1;
+        }
+
+        .secondary-btn {
+            width: auto;
+            margin-top: 0;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .secondary-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+            margin-top: 10px;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        button:disabled {
+            background: #475569;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .status {
+            margin-top: 24px;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 14px;
+            text-align: center;
+            display: none;
+        }
+
+        .status.success {
+            display: block;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            font-weight: 700;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            margin-top: 24px;
+            display: none;
+        }
+
+        .progress-bar-bg {
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(to right, var(--primary), #c084fc);
+            transition: width 0.3s ease-out;
+        }
+
+        /* JSON View */
+        .json-section {
+            margin-top: 32px;
+            display: none;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .json-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .json-view {
+            background: #0b1120;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-height: 400px;
+            overflow-y: auto;
+            color: #d1d5db;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .json-view::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .json-view::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 999px;
+        }
+
+        .json-view::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .status.error {
+            display: block;
+            background: rgba(239, 68, 68, 0.1);
+            color: var(--error);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+
+        .loader {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            margin-top: 16px;
+            padding: 14px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 12px;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .link-btn:hover {
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .link-btn svg {
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+
+        .link-btn:hover svg {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="max-width: 800px;">
+        <div class="card">
+            <h1>MF Helper</h1>
+            <p class="subtitle">Enter your CAS PDF details to update your portfolio</p>
+
+            <div class="form-group">
+                <label for="pdfPath">PDF Absolute Path</label>
+                <div class="input-group">
+                    <input type="text" id="pdfPath" placeholder="C:\Users\...\Statement.pdf" spellcheck="false">
+                    <button id="browseBtn" class="secondary-btn">Browse</button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">PDF Password</label>
+                <input type="password" id="password" placeholder="••••••••">
+            </div>
+
+            <button id="processBtn">
+                <span id="btnText">Process Portfolio</span>
+                <div id="loader" class="loader"></div>
+            </button>
+
+            <div style="display: flex; gap: 12px; margin-top: 16px;">
+                <button id="fetchReportBtn" class="link-btn"
+                    style="border:none; cursor:pointer; flex: 1; margin-top: 0; background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.2); color: var(--primary);">
+                    <span>Fetch new report</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M23 4v6h-6"></path>
+                        <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                    </svg>
+                </button>
+                <button id="viewLatestBtn" class="link-btn"
+                    style="border:none; cursor:pointer; flex: 1; margin-top: 0; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                    <span>View Latest Report</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="progress-container" id="progressContainer">
+                <label style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <span>Processing PDF...</span>
+                    <span id="progressText">0%</span>
+                </label>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="progressBar"></div>
+                </div>
+            </div>
+
+            <div id="status" class="status"></div>
+
+            <div class="json-section" id="jsonSection">
+                <div class="json-header">
+                    <label>Generated Portfolio JSON</label>
+                    <button id="copyJson" class="secondary-btn" style="font-size: 12px; padding: 6px 12px;">Copy
+                        JSON</button>
+                </div>
+                <div class="json-view" id="jsonView"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const processBtn = document.getElementById('processBtn');
+        const browseBtn = document.getElementById('browseBtn');
+        const btnText = document.getElementById('btnText');
+        const loader = document.getElementById('loader');
+        const status = document.getElementById('status');
+        const pdfPathInput = document.getElementById('pdfPath');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+        const jsonSection = document.getElementById('jsonSection');
+        const jsonView = document.getElementById('jsonView');
+        const copyJsonBtn = document.getElementById('copyJson');
+        const fetchReportBtn = document.getElementById('fetchReportBtn');
+        const viewLatestBtn = document.getElementById('viewLatestBtn');
+
+        fetchReportBtn.addEventListener('click', () => {
+            window.location.href = '/latest-report';
+        });
+
+        viewLatestBtn.addEventListener('click', () => {
+            window.location.href = '/view-latest';
+        });
+
+        browseBtn.addEventListener('click', async () => {
+            try {
+                const response = await fetch('/browse');
+                const result = await response.json();
+                if (result.path) {
+                    pdfPathInput.value = result.path;
+                }
+            } catch (err) {
+                console.error('Browse failed:', err);
+            }
+        });
+
+        processBtn.addEventListener('click', async () => {
+            const pdfPath = pdfPathInput.value.trim();
+            const password = document.getElementById('password').value.trim();
+
+            if (!pdfPath || !password) {
+                showStatus('Please fill in both fields.', 'error');
+                return;
+            }
+
+            // UI State: Loading
+            processBtn.disabled = true;
+            btnText.style.display = 'none';
+            loader.style.display = 'block';
+            status.style.display = 'none';
+            jsonSection.style.display = 'none';
+
+            // Show Progress
+            progressContainer.style.display = 'block';
+            updateProgress(0);
+
+            // Simulated progress while the backend works
+            let progress = 0;
+            const interval = setInterval(() => {
+                if (progress < 90) {
+                    progress += Math.random() * 15;
+                    updateProgress(Math.min(progress, 90));
+                }
+            }, 400);
+
+            try {
+                const response = await fetch('/process', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ pdf_path: pdfPath, password: password })
+                });
+
+                const result = await response.json();
+                clearInterval(interval);
+
+                if (result.success) {
+                    updateProgress(100);
+                    setTimeout(() => {
+                        showStatus(result.message, 'success');
+                        jsonView.textContent = JSON.stringify(result.data, null, 4);
+                        jsonSection.style.display = 'block';
+                        progressContainer.style.display = 'none';
+                    }, 500);
+                } else {
+                    showStatus(result.error || 'Extraction failed.', 'error');
+                    progressContainer.style.display = 'none';
+                }
+            } catch (err) {
+                clearInterval(interval);
+                showStatus('Network error occurred.', 'error');
+                progressContainer.style.display = 'none';
+            } finally {
+                processBtn.disabled = false;
+                btnText.style.display = 'block';
+                loader.style.display = 'none';
+            }
+        });
+
+        function showStatus(text, type) {
+            status.textContent = text;
+            status.className = `status ${type}`;
+        }
+
+        function updateProgress(percent) {
+            progressBar.style.width = percent + '%';
+            progressText.textContent = Math.round(percent) + '%';
+        }
+
+        copyJsonBtn.addEventListener('click', () => {
+            const text = jsonView.textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = copyJsonBtn.textContent;
+                copyJsonBtn.textContent = 'Copied!';
+                setTimeout(() => copyJsonBtn.textContent = originalText, 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>

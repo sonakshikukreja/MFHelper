@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generating Report | MFHelper</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .loader-wrapper {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 32px;
+        }
+
+        .loader-ring {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 4px solid rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+
+        .loader-spin {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 4px solid transparent;
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(to right, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 16px;
+            max-width: 300px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="loader-wrapper">
+            <div class="loader-ring"></div>
+            <div class="loader-spin"></div>
+        </div>
+        <h1>Fetching Fresh Data</h1>
+        <p>Analyzing mutual funds and generating your latest report. Please wait...</p>
+    </div>
+
+    <script>
+        async function generateAndRedirect() {
+            try {
+                const response = await fetch('/generate-report');
+                const result = await response.json();
+
+                if (result.success) {
+                    // Redirect to the latest report
+                    window.location.href = result.redirect_url;
+                } else {
+                    document.body.innerHTML = `
+                        <div class="container">
+                            <h1 style="background: var(--error); -webkit-text-fill-color: var(--error);">Generation Failed</h1>
+                            <p>${result.error || 'An unknown error occurred.'}</p>
+                            <a href="/" style="color: var(--primary); text-decoration: none; margin-top: 20px; display: inline-block;">Back to Home</a>
+                        </div>
+                    `;
+                }
+            } catch (err) {
+                console.error('Generation failed:', err);
+                document.body.innerHTML = `
+                    <div class="container">
+                        <h1 style="color: #ef4444; -webkit-text-fill-color: #ef4444;">Network Error</h1>
+                        <p>Could not connect to the server. Please check your connection.</p>
+                        <a href="/" style="color: var(--primary); text-decoration: none; margin-top: 20px; display: inline-block;">Back to Home</a>
+                    </div>
+                `;
+            }
+        }
+
+        // Start generation on load
+        window.addEventListener('load', generateAndRedirect);
+    </script>
+</body>
+
+</html>

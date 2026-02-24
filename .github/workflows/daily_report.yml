@@ -42,15 +42,17 @@ jobs:
 
       - name: Prepare for Deployment
         run: |
-          # Copy the latest generated report to index.html for easy viewing on GitHub Pages
-          LATEST_REPORT=$(ls -t Reports/report_*.html | head -n 1)
-          cp "$LATEST_REPORT" Reports/index.html
-          echo "Latest report $LATEST_REPORT copied to Reports/index.html"
+          mkdir -p deploy_root
+          # Copy our new static dashboard to root
+          cp github_pages_index.html deploy_root/index.html
+          # Copy all reports including the manifest
+          cp -r Reports deploy_root/
+          echo "Deployment root prepared with index.html and Reports/"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./Reports
-          publish_branch: gh-pages
-          force_orphan: true    # Keeps only the latest report in the history of gh-pages branch
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./deploy_root
+            publish_branch: gh-pages
+            force_orphan: true

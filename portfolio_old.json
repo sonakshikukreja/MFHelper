@@ -1,0 +1,865 @@
+{
+    "file_name": "BAXXXXXX9H_23112025-21022026_CP205237996_21022026014833333.pdf",
+    "investor_details": {},
+    "funds": [
+        {
+            "folio": "515304/74",
+            "isin": "INF579M01BM2",
+            "cost_value": "1,000.000",
+            "units": "82.321",
+            "nav_date": "20-Feb-2026",
+            "nav": "12.1986",
+            "market_value": "1,004.20",
+            "registrar": "CAMS",
+            "scheme_name": "IFMAFDG - 360 ONE Multi Asset Allocation Fund - Direct Plan - Growth (Non-Demat)"
+        },
+        {
+            "folio": "1045717803",
+            "isin": "INF209KB1O82",
+            "cost_value": "10,500.000",
+            "units": "295.401",
+            "nav_date": "20-Feb-2026",
+            "nav": "41.18",
+            "market_value": "12,164.61",
+            "registrar": "CAMS",
+            "scheme_name": "B66Y - Aditya Birla Sun Life PSU Equity Fund Direct-Growth (Non-Demat)"
+        },
+        {
+            "folio": "1045717803",
+            "isin": "INF209KC1183",
+            "cost_value": "500.000",
+            "units": "43.071",
+            "nav_date": "20-Feb-2026",
+            "nav": "11.5965",
+            "market_value": "499.47",
+            "registrar": "CAMS",
+            "scheme_name": "B129Y - Aditya Birla Sun Life Nifty India Defence Index Fund- Direct Growth (Non -Demat)"
+        },
+        {
+            "folio": "910218435096/0",
+            "isin": "INF846K01Y39",
+            "cost_value": "1,000.000",
+            "units": "87.869",
+            "nav_date": "20-Feb-2026",
+            "nav": "11.44",
+            "market_value": "1,005.22",
+            "registrar": "KFINTECH",
+            "scheme_name": "128GCDGG - Axis Greater China Equity Fund of Fund Direct Growth"
+        },
+        {
+            "folio": "91013110054/0",
+            "isin": "INF761K01702",
+            "cost_value": "1,000.000",
+            "units": "14.154",
+            "nav_date": "20-Feb-2026",
+            "nav": "70.18",
+            "market_value": "993.33",
+            "registrar": "KFINTECH",
+            "scheme_name": "116FIDGG - Bank of India Manufacturing and Infrastructure Fund - Direct Growth"
+        },
+        {
+            "folio": "1074030724/0",
+            "isin": "INF760K01EL8",
+            "cost_value": "27,100.280",
+            "units": "363.110",
+            "nav_date": "20-Feb-2026",
+            "nav": "200.84",
+            "market_value": "72,927.01",
+            "registrar": "KFINTECH",
+            "scheme_name": "101ETDGG - Canara Robeco ELSS Tax Saver Fund - Direct Growth"
+        },
+        {
+            "folio": "17760715504/0",
+            "isin": "INF760K01JC6",
+            "cost_value": "20,000.000",
+            "units": "486.267",
+            "nav_date": "20-Feb-2026",
+            "nav": "41.76",
+            "market_value": "20,306.51",
+            "registrar": "KFINTECH",
+            "scheme_name": "101SCDGG - Canara Robeco Small Cap Fund - Direct Growth"
+        },
+        {
+            "folio": "17760715504/0",
+            "isin": "INF760K01DU1",
+            "cost_value": "13,000.000",
+            "units": "105.667",
+            "nav_date": "20-Feb-2026",
+            "nav": "124.3500",
+            "market_value": "13,139.69",
+            "registrar": "KFINTECH",
+            "scheme_name": "101CFDGG - Canara Robeco Consumer Trends Fund - Direct Growth"
+        },
+        {
+            "folio": "17760715504/0",
+            "isin": "INF760K01FO9",
+            "cost_value": "13,000.000",
+            "units": "75.153",
+            "nav_date": "20-Feb-2026",
+            "nav": "186.48",
+            "market_value": "14,014.53",
+            "registrar": "KFINTECH",
+            "scheme_name": "101INDGG - Canara Robeco Infrastructure Fund - Direct Growth"
+        },
+        {
+            "folio": "9581524/20",
+            "isin": "INF740KA1MG9",
+            "cost_value": "9,000.000",
+            "units": "338.085",
+            "nav_date": "20-Feb-2026",
+            "nav": "27.4366",
+            "market_value": "9,275.90",
+            "registrar": "CAMS",
+            "scheme_name": "D869 - DSP Nifty Next 50 Index Fund - Dir - Growth (Non-Demat)"
+        },
+        {
+            "folio": "9581524/20",
+            "isin": "INF740KA1VN6",
+            "cost_value": "3,000.000",
+            "units": "267.081",
+            "nav_date": "20-Feb-2026",
+            "nav": "11.8747",
+            "market_value": "3,171.51",
+            "registrar": "CAMS",
+            "scheme_name": "D922 - DSP Nifty Private Bank Index Fund - Direct - Growth (Non-Demat)"
+        },
+        {
+            "folio": "9581524/20",
+            "isin": "INF740K01QA7",
+            "cost_value": "500.000",
+            "units": "4.180",
+            "nav_date": "20-Feb-2026",
+            "nav": "121.295",
+            "market_value": "507.01",
+            "registrar": "CAMS",
+            "scheme_name": "D785 - DSP Natural Resources and New Energy Fund - Direct Plan - Growth (Non -Demat)"
+        },
+        {
+            "folio": "9593046/83",
+            "isin": "INF740K01QD1",
+            "cost_value": "8,250.000",
+            "units": "39.863",
+            "nav_date": "20-Feb-2026",
+            "nav": "215.009",
+            "market_value": "8,570.90",
+            "registrar": "CAMS",
+            "scheme_name": "D788 - DSP Small Cap Fund - Direct Plan - Growth (formerly DSP Micro Cap Fund) (Non-Demat)"
+        },
+        {
+            "folio": "91043722912/0",
+            "isin": "INF754K01LB7",
+            "cost_value": "1,000.000",
+            "units": "29.344",
+            "nav_date": "20-Feb-2026",
+            "nav": "32.6498",
+            "market_value": "958.08",
+            "registrar": "KFINTECH",
+            "scheme_name": "118UTD1G - Edelweiss US Technology Equity Fund of Fund - Direct Plan Growth"
+        },
+        {
+            "folio": "91043724784/0",
+            "isin": "INF843K01AU1",
+            "cost_value": "1,000.000",
+            "units": "16.127",
+            "nav_date": "13-Feb-2026",
+            "nav": "62.973",
+            "market_value": "1,015.57",
+            "registrar": "KFINTECH",
+            "scheme_name": "118GCD1G - Edelweiss Greater China Equity Off-shore Fund - Direct Plan Growth"
+        },
+        {
+            "folio": "91043725342/0",
+            "isin": "INF843K01GI3",
+            "cost_value": "1,000.000",
+            "units": "30.706",
+            "nav_date": "20-Feb-2026",
+            "nav": "32.7563",
+            "market_value": "1,005.81",
+            "registrar": "KFINTECH",
+            "scheme_name": "118EDD1G - Edelweiss Europe Dynamic Equity Off-shore Fund - Direct Plan Growth"
+        },
+        {
+            "folio": "35426665",
+            "isin": "INF090I01IZ5",
+            "cost_value": "1,000.000",
+            "units": "23.314",
+            "nav_date": "20-Feb-2026",
+            "nav": "42.8773",
+            "market_value": "999.64",
+            "registrar": "CAMS",
+            "scheme_name": "FTI484 - Franklin Asian Equity Fund - Direct Plan - Growth (Non-Demat)"
+        },
+        {
+            "folio": "6755357/42",
+            "isin": "INF179KA1RQ7",
+            "cost_value": "17,500.090",
+            "units": "334.002",
+            "nav_date": "20-Feb-2026",
+            "nav": "362.827",
+            "market_value": "121,184.94",
+            "registrar": "CAMS",
+            "scheme_name": "HGFG1G - HDFC Large and Mid Cap Fund - Direct Growth Plan (formerly HDFC Large Cap Fund) (Non-Demat)"
+        },
+        {
+            "folio": "6755357/42",
+            "isin": "INF179K01YS4",
+            "cost_value": "30,000.000",
+            "units": "86.326",
+            "nav_date": "20-Feb-2026",
+            "nav": "1,563.218",
+            "market_value": "134,946.36",
+            "registrar": "CAMS",
+            "scheme_name": "H32T - HDFC ELSS Tax saver- Direct Plan - Growth Option (Non-Demat)"
+        },
+        {
+            "folio": "27053327/16",
+            "isin": "INF179K01XD8",
+            "cost_value": "24,000.000",
+            "units": "749.189",
+            "nav_date": "20-Feb-2026",
+            "nav": "34.3186",
+            "market_value": "25,711.12",
+            "registrar": "CAMS",
+            "scheme_name": "HMTOGT - HDFC Corporate Bond Fund - Direct Plan - Growth Option (formerly HDFC Medium term Opportunities Fund, erstwhile HDFC Gilt Fund Short Term,HDFC Floating Rate Income Fund - Long Term Plan merged) (Non-Demat)"
+        },
+        {
+            "folio": "27053327/16",
+            "isin": "INF179KA1RW5",
+            "cost_value": "32,500.000",
+            "units": "217.417",
+            "nav_date": "20-Feb-2026",
+            "nav": "153.431",
+            "market_value": "33,358.51",
+            "registrar": "CAMS",
+            "scheme_name": "HACG1G - HDFC Small Cap Fund - Direct Growth Plan (Non-Demat)"
+        },
+        {
+            "folio": "27053327/16",
+            "isin": "INF179KC1JI9",
+            "cost_value": "1,500.000",
+            "units": "143.144",
+            "nav_date": "20-Feb-2026",
+            "nav": "10.7917",
+            "market_value": "1,544.77",
+            "registrar": "CAMS",
+            "scheme_name": "HHNEDG - HDFC Nifty Top 20 Equal Weight Index Fund Direct Growth (Non-Demat)"
+        },
+        {
+            "folio": "27053327/16",
+            "isin": "INF179KB1MF0",
+            "cost_value": "7,500.000",
+            "units": "142.898",
+            "nav_date": "20-Feb-2026",
+            "nav": "57.946",
+            "market_value": "8,280.37",
+            "registrar": "CAMS",
+            "scheme_name": "HHREDP - HDFC Retirement Savings Fund - Equity Plan - Direct Plan -Growth Option (Non-Demat)"
+        },
+        {
+            "folio": "27053327/16",
+            "isin": "INF179K01XQ0",
+            "cost_value": "23,000.000",
+            "units": "115.028",
+            "nav_date": "20-Feb-2026",
+            "nav": "224.106",
+            "market_value": "25,778.46",
+            "registrar": "CAMS",
+            "scheme_name": "HMCOGT - HDFC Mid Cap Fund - Direct Plan - Growth Option (Non-Demat)"
+        },
+        {
+            "folio": "27053327/16",
+            "isin": "INF179K01VK7",
+            "cost_value": "27,500.000",
+            "units": "110.123",
+            "nav_date": "20-Feb-2026",
+            "nav": "274.182",
+            "market_value": "30,193.74",
+            "registrar": "CAMS",
+            "scheme_name": "HCORGT - HDFC Focused Fund - Direct Plan - Growth Option (formerly HDFC Core and Satellite Fund) (Non-Demat)"
+        },
+        {
+            "folio": "27053327/16",
+            "isin": "INF179K01WA6",
+            "cost_value": "21,000.000",
+            "units": "39.529",
+            "nav_date": "20-Feb-2026",
+            "nav": "576.210",
+            "market_value": "22,777.01",
+            "registrar": "CAMS",
+            "scheme_name": "HGFGT - HDFC Balanced Advantage Fund - Direct Plan - Growth Option (formerly HDFC Growth Fund, erstwhile HDFC Prudence Fund merged) (Non-Demat)"
+        },
+        {
+            "folio": "27053327/16",
+            "isin": "INF179KC1DU7",
+            "cost_value": "1,000.000",
+            "units": "26.917",
+            "nav_date": "20-Feb-2026",
+            "nav": "40.9127",
+            "market_value": "1,101.25",
+            "registrar": "CAMS",
+            "scheme_name": "HSLFDG - HDFC Silver ETF Fund of Fund Direct Growth (Non-Demat)"
+        },
+        {
+            "folio": "27053327/16",
+            "isin": "INF179KC1GI5",
+            "cost_value": "500.000",
+            "units": "19.895",
+            "nav_date": "20-Feb-2026",
+            "nav": "25.099",
+            "market_value": "499.34",
+            "registrar": "CAMS",
+            "scheme_name": "HHDDGR - HDFC Defence Fund Direct Growth (Non-Demat)"
+        },
+        {
+            "folio": "27053327/16",
+            "isin": "INF179K01YV8",
+            "cost_value": "20,500.000",
+            "units": "17.312",
+            "nav_date": "20-Feb-2026",
+            "nav": "1,266.821",
+            "market_value": "21,931.21",
+            "registrar": "CAMS",
+            "scheme_name": "H44T - HDFC Large Cap Fund - Direct Plan - Growth Option (formerly HDFC Top 100 Fund) (Non-Demat)"
+        },
+        {
+            "folio": "27053327/16",
+            "isin": "INF179K01UT0",
+            "cost_value": "1,000.000",
+            "units": "0.436",
+            "nav_date": "20-Feb-2026",
+            "nav": "2,282.940",
+            "market_value": "995.36",
+            "registrar": "CAMS",
+            "scheme_name": "H02T - HDFC Flexi Cap Fund - Direct Plan - Growth Option (Non-Demat)"
+        },
+        {
+            "folio": "11278330/02",
+            "isin": "INF336L01NV5",
+            "cost_value": "9,461.220",
+            "units": "310.608",
+            "nav_date": "20-Feb-2026",
+            "nav": "30.1906",
+            "market_value": "9,377.44",
+            "registrar": "CAMS",
+            "scheme_name": "OHLEG - HSBC Large & Mid Cap Fund - Direct Growth (Formerly known as HSBC Large and Midcap Equity Fund Direct Plan Growth) (Non-Demat)"
+        },
+        {
+            "folio": "11278330/02",
+            "isin": "INF336L01CM7",
+            "cost_value": "24,209.080",
+            "units": "44.797",
+            "nav_date": "20-Feb-2026",
+            "nav": "550.8364",
+            "market_value": "24,675.82",
+            "registrar": "CAMS",
+            "scheme_name": "OHEFG - HSBC Large Cap Fund - Direct Growth (Formerly known as HSBC Large cap Equity Fund - Growth Direct Plan) (Formerly HSBC Equity Fund) (Non-Demat)"
+        },
+        {
+            "folio": "20354272/42",
+            "isin": "INF917K01QA1",
+            "cost_value": "27,500.000",
+            "units": "312.953",
+            "nav_date": "20-Feb-2026",
+            "nav": "85.2888",
+            "market_value": "26,691.39",
+            "registrar": "CAMS",
+            "scheme_name": "OLEBDG - HSBC Small Cap Fund - Direct Growth (Formerly known as L&T Emerging Businesses Fund Direct Growth) (Non -Demat)"
+        },
+        {
+            "folio": "31149674/02",
+            "isin": "INF109K016B1",
+            "cost_value": "24,000.000",
+            "units": "796.892",
+            "nav_date": "20-Feb-2026",
+            "nav": "32.4712",
+            "market_value": "25,876.04",
+            "registrar": "CAMS",
+            "scheme_name": "P8078 - ICICI Prudential Corporate Bond Fund - Direct Plan - Growth (formerly ICICI Prudential Ultra Short Term Plan) (Non -Demat)"
+        },
+        {
+            "folio": "31149674/02",
+            "isin": "INF109KC1Y98",
+            "cost_value": "6,000.000",
+            "units": "320.860",
+            "nav_date": "20-Feb-2026",
+            "nav": "37.8556",
+            "market_value": "12,146.35",
+            "registrar": "CAMS",
+            "scheme_name": "P9673 - ICICI Prudential Silver ETF FOF DP Growth (Non-Demat)"
+        },
+        {
+            "folio": "31149674/02",
+            "isin": "INF109K016L0",
+            "cost_value": "34,000.000",
+            "units": "291.718",
+            "nav_date": "20-Feb-2026",
+            "nav": "125.00",
+            "market_value": "36,464.75",
+            "registrar": "CAMS",
+            "scheme_name": "P8042 - ICICI Prudential Large Cap Fund (erstwhile Bluechip Fund) - Direct Plan - Growth (formerly ICICI Prudential Focused Bluechip Equity Fund) (Non-Demat)"
+        },
+        {
+            "folio": "31149674/02",
+            "isin": "INF109K01Z71",
+            "cost_value": "15,000.000",
+            "units": "226.094",
+            "nav_date": "20-Feb-2026",
+            "nav": "83.81",
+            "market_value": "18,948.94",
+            "registrar": "CAMS",
+            "scheme_name": "P8133 - ICICI Prudential US Bluechip Equity Fund - Direct Plan - Growth (Non-Demat)"
+        },
+        {
+            "folio": "31149674/02",
+            "isin": "INF109K015M0",
+            "cost_value": "6,500.000",
+            "units": "68.658",
+            "nav_date": "20-Feb-2026",
+            "nav": "95.24",
+            "market_value": "6,538.99",
+            "registrar": "CAMS",
+            "scheme_name": "P8034 - ICICI Prudential Smallcap Fund - Direct Plan - Growth (formerly ICICI Prudential Indo Asia Equity Fund) (Non -Demat)"
+        },
+        {
+            "folio": "31149674/02",
+            "isin": "INF109K01Y07",
+            "cost_value": "21,000.000",
+            "units": "51.751",
+            "nav_date": "20-Feb-2026",
+            "nav": "455.44",
+            "market_value": "23,569.48",
+            "registrar": "CAMS",
+            "scheme_name": "P8017 - ICICI Prudential Equity & Debt Fund - Direct Plan - Growth (formerly ICICI Prudential Balanced Fund) (Non-Demat)"
+        },
+        {
+            "folio": "31149674/02",
+            "isin": "INF109KC1U50",
+            "cost_value": "1,000.000",
+            "units": "48.716",
+            "nav_date": "20-Feb-2026",
+            "nav": "19.8030",
+            "market_value": "964.72",
+            "registrar": "CAMS",
+            "scheme_name": "P9656 - ICICI Prudential NASDAQ 100 Index Fund - Direct Plan - Growth (Non-Demat)"
+        },
+        {
+            "folio": "31149674/02",
+            "isin": "INF109K012K1",
+            "cost_value": "20,100.000",
+            "units": "39.288",
+            "nav_date": "20-Feb-2026",
+            "nav": "538.89",
+            "market_value": "21,171.91",
+            "registrar": "CAMS",
+            "scheme_name": "P8176 - ICICI Prudential Value Fund (erstwhile Value Discovery Fund) - Direct Plan - Growth (Non-Demat)"
+        },
+        {
+            "folio": "31149674/02",
+            "isin": "INF109KC1Z55",
+            "cost_value": "1,000.000",
+            "units": "37.167",
+            "nav_date": "20-Feb-2026",
+            "nav": "29.6501",
+            "market_value": "1,102.01",
+            "registrar": "CAMS",
+            "scheme_name": "P9671 - ICICI Prudential Strategic Metal and Energy Equity Fund of Fund Direct Plan Growth (Non-Demat)"
+        },
+        {
+            "folio": "31149674/02",
+            "isin": "INF109K014O9",
+            "cost_value": "20,500.000",
+            "units": "24.497",
+            "nav_date": "20-Feb-2026",
+            "nav": "902.87",
+            "market_value": "22,117.61",
+            "registrar": "CAMS",
+            "scheme_name": "P8030 - ICICI Prudential Multicap Fund - Direct Plan - Growth (Non-Demat)"
+        },
+        {
+            "folio": "31149674/02",
+            "isin": "INF109K011N7",
+            "cost_value": "1,000.000",
+            "units": "2.765",
+            "nav_date": "20-Feb-2026",
+            "nav": "360.08",
+            "market_value": "995.62",
+            "registrar": "CAMS",
+            "scheme_name": "P8182 - ICICI Prudential MidCap Fund - Direct Plan - Growth (Non-Demat)"
+        },
+        {
+            "folio": "31041912303/0",
+            "isin": "INF205K01NG5",
+            "cost_value": "1,000.000",
+            "units": "12.674",
+            "nav_date": "20-Feb-2026",
+            "nav": "81.68",
+            "market_value": "1,035.21",
+            "registrar": "KFINTECH",
+            "scheme_name": "120PSD1G - Invesco India PSU Equity Fund - Direct Plan Growth"
+        },
+        {
+            "folio": "31041912303/0",
+            "isin": "INF205K01KY4",
+            "cost_value": "500.000",
+            "units": "2.798",
+            "nav_date": "20-Feb-2026",
+            "nav": "177.15",
+            "market_value": "495.67",
+            "registrar": "KFINTECH",
+            "scheme_name": "120BFD1G - Invesco India Financial Services Fund - Direct Plan Growth"
+        },
+        {
+            "folio": "31041912303/0",
+            "isin": "INF205K01MV6",
+            "cost_value": "500.000",
+            "units": "2.257",
+            "nav_date": "20-Feb-2026",
+            "nav": "217.62",
+            "market_value": "491.17",
+            "registrar": "KFINTECH",
+            "scheme_name": "120MCD1G - Invesco India Midcap Fund - Direct Plan Growth"
+        },
+        {
+            "folio": "15646701/40",
+            "isin": "INF174K01LT0",
+            "cost_value": "6,500.000",
+            "units": "43.577",
+            "nav_date": "20-Feb-2026",
+            "nav": "158.610",
+            "market_value": "6,911.75",
+            "registrar": "CAMS",
+            "scheme_name": "K123D - Kotak Midcap Fund- Direct Plan - Growth (Erstwhile Kotak Emerging Equity Scheme) (Non-Demat)"
+        },
+        {
+            "folio": "15646701/40",
+            "isin": "INF174K01LW4",
+            "cost_value": "1,000.000",
+            "units": "26.642",
+            "nav_date": "20-Feb-2026",
+            "nav": "37.777",
+            "market_value": "1,006.45",
+            "registrar": "CAMS",
+            "scheme_name": "K143D - Kotak Global Emerging Market Overseas Equity Omni FOF Direct Plan - Growth (Non-Demat)"
+        },
+        {
+            "folio": "57734963325/0",
+            "isin": "INF397L01BU4",
+            "cost_value": "6,000.000",
+            "units": "201.473",
+            "nav_date": "20-Feb-2026",
+            "nav": "42.0280",
+            "market_value": "8,467.51",
+            "registrar": "KFINTECH",
+            "scheme_name": "102IGG1G - LIC MF Gold ETF Fund of Fund (Formerly IDBI MF Gold Fund) FOF - Direct Plan"
+        },
+        {
+            "folio": "91019177616/0",
+            "isin": "INF247L01BQ9",
+            "cost_value": "16,500.000",
+            "units": "974.152",
+            "nav_date": "20-Feb-2026",
+            "nav": "15.8711",
+            "market_value": "15,460.86",
+            "registrar": "KFINTECH",
+            "scheme_name": "127MPGDG - Motilal Oswal Nifty Microcap 250 Index Fund - Direct Plan Growth"
+        },
+        {
+            "folio": "91019177616/0",
+            "isin": "INF247L01189",
+            "cost_value": "21,900.530",
+            "units": "462.413",
+            "nav_date": "20-Feb-2026",
+            "nav": "50.5155",
+            "market_value": "23,359.02",
+            "registrar": "KFINTECH",
+            "scheme_name": "127MFGDG - Motilal Oswal Focused Fund - Direct Plan Growth"
+        },
+        {
+            "folio": "91019177616/0",
+            "isin": "INF247L01445",
+            "cost_value": "29,000.000",
+            "units": "262.749",
+            "nav_date": "20-Feb-2026",
+            "nav": "105.4926",
+            "market_value": "27,718.08",
+            "registrar": "KFINTECH",
+            "scheme_name": "127FMGDG - Motilal Oswal Midcap Fund - Direct Plan Growth"
+        },
+        {
+            "folio": "91019177616/0",
+            "isin": "INF247L01DW3",
+            "cost_value": "1,000.000",
+            "units": "76.124",
+            "nav_date": "20-Feb-2026",
+            "nav": "13.6699",
+            "market_value": "1,040.61",
+            "registrar": "KFINTECH",
+            "scheme_name": "127FSGDG - Motilal Oswal Nifty MidSmall Financial Services Index Fund - Direct Plan Growth"
+        },
+        {
+            "folio": "91019177616/0",
+            "isin": "INF247L01CW5",
+            "cost_value": "500.000",
+            "units": "47.007",
+            "nav_date": "20-Feb-2026",
+            "nav": "10.6250",
+            "market_value": "499.45",
+            "registrar": "KFINTECH",
+            "scheme_name": "127DIGDG - Motilal Oswal Nifty India Defence Index Fund - Direct Growth"
+        },
+        {
+            "folio": "91019177616/0",
+            "isin": "INF247L01EB5",
+            "cost_value": "500.000",
+            "units": "44.792",
+            "nav_date": "20-Feb-2026",
+            "nav": "11.1020",
+            "market_value": "497.28",
+            "registrar": "KFINTECH",
+            "scheme_name": "127CMGDG - Motilal Oswal Nifty Capital Market Index Fund - Direct Plan Growth"
+        },
+        {
+            "folio": "91019177616/0",
+            "isin": "INF247L01BF2",
+            "cost_value": "1,000.000",
+            "units": "34.992",
+            "nav_date": "20-Feb-2026",
+            "nav": "30.2248",
+            "market_value": "1,057.63",
+            "registrar": "KFINTECH",
+            "scheme_name": "127S3GDG - Motilal Oswal BSE Enhanced Value Index Fund - Direct Growth"
+        },
+        {
+            "folio": "477320100701/0",
+            "isin": "INF204K01K15",
+            "cost_value": "14,750.000",
+            "units": "80.237",
+            "nav_date": "20-Feb-2026",
+            "nav": "183.3340",
+            "market_value": "14,710.17",
+            "registrar": "KFINTECH",
+            "scheme_name": "RMFSCAGG - NIPPON INDIA SMALL CAP FUND - DIRECT GROWTH PLAN GROWTH OPTION"
+        },
+        {
+            "folio": "477320100701/0",
+            "isin": "INF204K01E54",
+            "cost_value": "30,000.000",
+            "units": "7.135",
+            "nav_date": "20-Feb-2026",
+            "nav": "4,741.7743",
+            "market_value": "33,832.56",
+            "registrar": "KFINTECH",
+            "scheme_name": "RMFGFAGG - NIPPON INDIA GROWTH MID CAP FUND - DIRECT GROWTH PLAN GROWTH OPTION"
+        },
+        {
+            "folio": "477320100701/0",
+            "isin": "INF204K01F20",
+            "cost_value": "3,000.000",
+            "units": "2.030",
+            "nav_date": "20-Feb-2026",
+            "nav": "1,605.2901",
+            "market_value": "3,258.74",
+            "registrar": "KFINTECH",
+            "scheme_name": "RMFGSAGG - NIPPON INDIA VISION LARGE & MID CAP FUND - DIRECT GROWTH PLAN GROWTH OPTION"
+        },
+        {
+            "folio": "14539241",
+            "isin": "INF879O01027",
+            "cost_value": "30,000.000",
+            "units": "344.243",
+            "nav_date": "20-Feb-2026",
+            "nav": "92.9299",
+            "market_value": "31,990.47",
+            "registrar": "CAMS",
+            "scheme_name": "PP001ZG - Parag Parikh Flexi Cap Fund - Direct Plan Growth (formerly Parag Parikh Long Term Value Fund) (Non-Demat)"
+        },
+        {
+            "folio": "51054574946/0",
+            "isin": "INF966L01887",
+            "cost_value": "7,000.000",
+            "units": "27.397",
+            "nav_date": "20-Feb-2026",
+            "nav": "221.3408",
+            "market_value": "6,064.07",
+            "registrar": "KFINTECH",
+            "scheme_name": "166OFDGG - quant Mid Cap Fund - Direct Plan"
+        },
+        {
+            "folio": "51054574946/0",
+            "isin": "INF966L01689",
+            "cost_value": "1,000.000",
+            "units": "3.886",
+            "nav_date": "20-Feb-2026",
+            "nav": "261.0658",
+            "market_value": "1,014.50",
+            "registrar": "KFINTECH",
+            "scheme_name": "166IBDGG - quant Small Cap Fund - Direct Plan Growth"
+        },
+        {
+            "folio": "51060066151/0",
+            "isin": "INF966L01689",
+            "cost_value": "7,000.000",
+            "units": "25.280",
+            "nav_date": "20-Feb-2026",
+            "nav": "261.0658",
+            "market_value": "6,599.74",
+            "registrar": "KFINTECH",
+            "scheme_name": "166IBDGG - quant Small Cap Fund - Direct Plan Growth"
+        },
+        {
+            "folio": "9774204433/0",
+            "isin": "INF082J01150",
+            "cost_value": "1,000.000",
+            "units": "18.034",
+            "nav_date": "20-Feb-2026",
+            "nav": "59.0112",
+            "market_value": "1,064.21",
+            "registrar": "KFINTECH",
+            "scheme_name": "123QSGPG - Quantum Gold Savings Fund - Direct Plan Growth"
+        },
+        {
+            "folio": "36444497",
+            "isin": "INF200K01RV6",
+            "cost_value": "37,000.000",
+            "units": "158.637",
+            "nav_date": "20-Feb-2026",
+            "nav": "227.9008",
+            "market_value": "36,153.50",
+            "registrar": "CAMS",
+            "scheme_name": "LD034G - SBI Technology Opportunities Fund Direct Growth (formerly SBI IT Fund) (Non-Demat)"
+        },
+        {
+            "folio": "36444497",
+            "isin": "INF200K01T51",
+            "cost_value": "15,927.920",
+            "units": "84.485",
+            "nav_date": "20-Feb-2026",
+            "nav": "186.2228",
+            "market_value": "15,733.03",
+            "registrar": "CAMS",
+            "scheme_name": "LD346G - SBI Small Cap Fund Direct Growth (formerly SBI Small & Midcap Fund) (Non -Demat)"
+        },
+        {
+            "folio": "36444497",
+            "isin": "INF200K01TE8",
+            "cost_value": "18,000.000",
+            "units": "80.980",
+            "nav_date": "20-Feb-2026",
+            "nav": "237.6691",
+            "market_value": "19,246.44",
+            "registrar": "CAMS",
+            "scheme_name": "LD055A - SBI Nifty Index Fund - Direct Plan - Growth (Non-Demat)"
+        },
+        {
+            "folio": "36444497",
+            "isin": "INF200K01RM5",
+            "cost_value": "16,000.000",
+            "units": "45.369",
+            "nav_date": "20-Feb-2026",
+            "nav": "335.2435",
+            "market_value": "15,209.66",
+            "registrar": "CAMS",
+            "scheme_name": "LD033G - SBI Consumption Opportunities Fund Direct Growth (formerly SBI FMCG Fund) (Non-Demat)"
+        },
+        {
+            "folio": "36444497",
+            "isin": "INF200KB1688",
+            "cost_value": "500.000",
+            "units": "33.044",
+            "nav_date": "20-Feb-2026",
+            "nav": "15.4380",
+            "market_value": "510.13",
+            "registrar": "CAMS",
+            "scheme_name": "LD698G - SBI BSE PSU Bank Index Fund - Direct Growth (Non-Demat)"
+        },
+        {
+            "folio": "36444497",
+            "isin": "INF200K01SB6",
+            "cost_value": "500.000",
+            "units": "4.024",
+            "nav_date": "20-Feb-2026",
+            "nav": "123.7931",
+            "market_value": "498.14",
+            "registrar": "CAMS",
+            "scheme_name": "LD094G - SBI Comma Fund - Direct Plan - Growth (Non-Demat)"
+        },
+        {
+            "folio": "61010910194/0",
+            "isin": "INF903J01MJ3",
+            "cost_value": "10,000.000",
+            "units": "7.121",
+            "nav_date": "20-Feb-2026",
+            "nav": "1,564.0919",
+            "market_value": "11,137.90",
+            "registrar": "KFINTECH",
+            "scheme_name": "176MCDG - SUNDARAM MID CAP FUND DIRECT GROWTH"
+        },
+        {
+            "folio": "10529826/27",
+            "isin": "INF277K011O1",
+            "cost_value": "16,500.000",
+            "units": "380.819",
+            "nav_date": "20-Feb-2026",
+            "nav": "39.3194",
+            "market_value": "14,973.57",
+            "registrar": "CAMS",
+            "scheme_name": "TSCFGZ - Tata Small Cap Fund - Direct Plan - Growth (Non-Demat)"
+        },
+        {
+            "folio": "10529826/27",
+            "isin": "INF277KA1CO5",
+            "cost_value": "500.000",
+            "units": "39.119",
+            "nav_date": "20-Feb-2026",
+            "nav": "12.7123",
+            "market_value": "497.29",
+            "registrar": "CAMS",
+            "scheme_name": "TCMGZ - Tata Nifty Capital Markets Index Fund Direct Plan Growth (Non-Demat)"
+        },
+        {
+            "folio": "577388144434/0",
+            "isin": "INF789F01SH5",
+            "cost_value": "500.000",
+            "units": "1.465",
+            "nav_date": "20-Feb-2026",
+            "nav": "335.5260",
+            "market_value": "491.55",
+            "registrar": "KFINTECH",
+            "scheme_name": "108ASD2G - UTI Transportation & Logistics Fund - Direct Plan Total 825,699.12 1,121,528.86"
+        }
+    ],
+    "raw_pages": [
+        {
+            "page_number": 1,
+            "text": "7101-eviL\n4.3V:noisreV\n338431622012-SWSACSMAC\nConsolidated Account Summary\nAs on 21-Feb-2026\nEmail Id: ravi8737@gmail.com The Consolidated Account Summary is brought to you as an investor\nfriendly initiative by CAMS and KFintech, and lists the balances and\nRavi Kukreja valuation of Mutual Funds in which you are holding investments. The\nconsolidationhasbeencarriedoutbasedontheemailidenteredbyyou.If\nyou have not entered a PAN Number and if the email id is common to\nC/O RAVI KUKREJA,BLDG NO-T/1, FLAT NO-501,F RESIDENCES,\nseveralmembersofyourfamily,thisAccountSummarywillconsolidateall\nSNO-7/1,WADGAONSHERI,NEAR BRAHMA SUN CITY,PUNE CITY,PU\nthose investments as well.\nNE,MAHARASHTRA,411014,INDIA\nPUNE - 411014 If you find any folios missing from this consolidation, you have not\nMaharashtra registered your email id against those folios.\nIndia\nPhone Res: 9503715224 This statement may not reflect the complete information on your DEMAT\nholdings. Please check with your DP for details on DEMAT holdings.\nMobile: +919893018887\nFolio No. ISIN Scheme Name Cost Value Unit Balance NAV Date NAV Market Value Registrar\n(INR) (INR) (INR)\n515304/74 INF579M01BM2 IFMAFDG - 360 ONE Multi Asset Allocation 1,000.000 82.321 20-Feb-2026 12.1986 1,004.20 CAMS\nFund - Direct Plan - Growth (Non-Demat)\n1045717803 INF209KB1O82 B66Y - Aditya Birla Sun Life PSU Equity 10,500.000 295.401 20-Feb-2026 41.18 12,164.61 CAMS\nFund Direct-Growth (Non-Demat)\n1045717803 INF209KC1183 B129Y - Aditya Birla Sun Life Nifty India 500.000 43.071 20-Feb-2026 11.5965 499.47 CAMS\nDefence Index Fund- Direct Growth (Non\n-Demat)\n910218435096/0INF846K01Y39 128GCDGG - Axis Greater China Equity 1,000.000 87.869 20-Feb-2026 11.44 1,005.22 KFINTECH\nFund of Fund Direct Growth\n91013110054/0INF761K01702 116FIDGG - Bank of India Manufacturing 1,000.000 14.154 20-Feb-2026 70.18 993.33 KFINTECH\nand Infrastructure Fund - Direct Growth\n1074030724/0 INF760K01EL8 101ETDGG - Canara Robeco ELSS Tax Saver 27,100.280 363.110 20-Feb-2026 200.84 72,927.01 KFINTECH\nFund - Direct Growth\n17760715504/0INF760K01JC6 101SCDGG - Canara Robeco Small Cap Fund 20,000.000 486.267 20-Feb-2026 41.76 20,306.51 KFINTECH\n- Direct Growth\n17760715504/0INF760K01DU1 101CFDGG - Canara Robeco Consumer 13,000.000 105.667 20-Feb-2026 124.3500 13,139.69 KFINTECH\nTrends Fund - Direct Growth\n17760715504/0INF760K01FO9 101INDGG - Canara Robeco Infrastructure 13,000.000 75.153 20-Feb-2026 186.48 14,014.53 KFINTECH\nFund - Direct Growth\n9581524/20 INF740KA1MG9 D869 - DSP Nifty Next 50 Index Fund - Dir - 9,000.000 338.085 20-Feb-2026 27.4366 9,275.90 CAMS\nGrowth (Non-Demat)\n9581524/20 INF740KA1VN6 D922 - DSP Nifty Private Bank Index Fund - 3,000.000 267.081 20-Feb-2026 11.8747 3,171.51 CAMS\nDirect - Growth (Non-Demat)\n9581524/20 INF740K01QA7 D785 - DSP Natural Resources and New 500.000 4.180 20-Feb-2026 121.295 507.01 CAMS\nEnergy Fund - Direct Plan - Growth (Non\n-Demat)\n9593046/83 INF740K01QD1 D788 - DSP Small Cap Fund - Direct Plan - 8,250.000 39.863 20-Feb-2026 215.009 8,570.90 CAMS\nGrowth (formerly DSP Micro Cap Fund)\n(Non-Demat)\n91043722912/0INF754K01LB7 118UTD1G - Edelweiss US Technology 1,000.000 29.344 20-Feb-2026 32.6498 958.08 KFINTECH\nEquity Fund of Fund - Direct Plan Growth\n91043724784/0INF843K01AU1 118GCD1G - Edelweiss Greater China Equity 1,000.000 16.127 13-Feb-2026 62.973 1,015.57 KFINTECH\nOff-shore Fund - Direct Plan Growth\n91043725342/0INF843K01GI3 118EDD1G - Edelweiss Europe Dynamic 1,000.000 30.706 20-Feb-2026 32.7563 1,005.81 KFINTECH\nEquity Off-shore Fund - Direct Plan Growth\n35426665 INF090I01IZ5 FTI484 - Franklin Asian Equity Fund - 1,000.000 23.314 20-Feb-2026 42.8773 999.64 CAMS\nDirect Plan - Growth (Non-Demat)\n6755357/42 INF179KA1RQ7 HGFG1G - HDFC Large and Mid Cap Fund - 17,500.090 334.002 20-Feb-2026 362.827 121,184.94 CAMS\nDirect Growth Plan (formerly HDFC Large\nCap Fund) (Non-Demat)\n6755357/42 INF179K01YS4 H32T - HDFC ELSS Tax saver- Direct Plan - 30,000.000 86.326 20-Feb-2026 1,563.218 134,946.36 CAMS\nGrowth Option (Non-Demat)\n27053327/16 INF179K01XD8 HMTOGT - HDFC Corporate Bond Fund - 24,000.000 749.189 20-Feb-2026 34.3186 25,711.12 CAMS\nDirect Plan - Growth Option (formerly\nHDFC Medium term Opportunities Fund,\nerstwhile HDFC Gilt Fund Short Term,HDFC\nFloating Rate Income Fund - Long Term\nPlan merged) (Non-Demat)\n27053327/16 INF179KA1RW5 HACG1G - HDFC Small Cap Fund - Direct 32,500.000 217.417 20-Feb-2026 153.431 33,358.51 CAMS\nGrowth Plan (Non-Demat)\n27053327/16 INF179KC1JI9 HHNEDG - HDFC Nifty Top 20 Equal Weight 1,500.000 143.144 20-Feb-2026 10.7917 1,544.77 CAMS\nIndex Fund Direct Growth (Non-Demat)\n27053327/16 INF179KB1MF0 HHREDP - HDFC Retirement Savings Fund - 7,500.000 142.898 20-Feb-2026 57.946 8,280.37 CAMS\nEquity Plan - Direct Plan -Growth Option\n(Non-Demat)\n27053327/16 INF179K01XQ0 HMCOGT - HDFC Mid Cap Fund - Direct Plan 23,000.000 115.028 20-Feb-2026 224.106 25,778.46 CAMS\n- Growth Option (Non-Demat)\n27053327/16 INF179K01VK7 HCORGT - HDFC Focused Fund - Direct Plan 27,500.000 110.123 20-Feb-2026 274.182 30,193.74 CAMS\n- Growth Option (formerly HDFC Core and\nSatellite Fund) (Non-Demat)\nPage 1 of 8"
+        },
+        {
+            "page_number": 2,
+            "text": "7101-eviL\n4.3V:noisreV\n338431622012-SWSACSMAC\nConsolidated Account Summary\nAs on 21-Feb-2026\nFolio No. ISIN Scheme Name Cost Value Unit Balance NAV Date NAV Market Value Registrar\n(INR) (INR) (INR)\n27053327/16 INF179K01WA6 HGFGT - HDFC Balanced Advantage Fund - 21,000.000 39.529 20-Feb-2026 576.210 22,777.01 CAMS\nDirect Plan - Growth Option (formerly\nHDFC Growth Fund, erstwhile HDFC\nPrudence Fund merged) (Non-Demat)\n27053327/16 INF179KC1DU7 HSLFDG - HDFC Silver ETF Fund of Fund 1,000.000 26.917 20-Feb-2026 40.9127 1,101.25 CAMS\nDirect Growth (Non-Demat)\n27053327/16 INF179KC1GI5 HHDDGR - HDFC Defence Fund Direct 500.000 19.895 20-Feb-2026 25.099 499.34 CAMS\nGrowth (Non-Demat)\n27053327/16 INF179K01YV8 H44T - HDFC Large Cap Fund - Direct Plan 20,500.000 17.312 20-Feb-2026 1,266.821 21,931.21 CAMS\n- Growth Option (formerly HDFC Top 100\nFund) (Non-Demat)\n27053327/16 INF179K01UT0 H02T - HDFC Flexi Cap Fund - Direct Plan - 1,000.000 0.436 20-Feb-2026 2,282.940 995.36 CAMS\nGrowth Option (Non-Demat)\n11278330/02 INF336L01NV5 OHLEG - HSBC Large & Mid Cap Fund - 9,461.220 310.608 20-Feb-2026 30.1906 9,377.44 CAMS\nDirect Growth (Formerly known as HSBC\nLarge and Midcap Equity Fund Direct Plan\nGrowth) (Non-Demat)\n11278330/02 INF336L01CM7 OHEFG - HSBC Large Cap Fund - Direct 24,209.080 44.797 20-Feb-2026 550.8364 24,675.82 CAMS\nGrowth (Formerly known as HSBC Large\ncap Equity Fund - Growth Direct Plan)\n(Formerly HSBC Equity Fund) (Non-Demat)\n20354272/42 INF917K01QA1 OLEBDG - HSBC Small Cap Fund - Direct 27,500.000 312.953 20-Feb-2026 85.2888 26,691.39 CAMS\nGrowth (Formerly known as L&T Emerging\nBusinesses Fund Direct Growth) (Non\n-Demat)\n31149674/02 INF109K016B1 P8078 - ICICI Prudential Corporate Bond 24,000.000 796.892 20-Feb-2026 32.4712 25,876.04 CAMS\nFund - Direct Plan - Growth (formerly ICICI\nPrudential Ultra Short Term Plan) (Non\n-Demat)\n31149674/02 INF109KC1Y98 P9673 - ICICI Prudential Silver ETF FOF DP 6,000.000 320.860 20-Feb-2026 37.8556 12,146.35 CAMS\nGrowth (Non-Demat)\n31149674/02 INF109K016L0 P8042 - ICICI Prudential Large Cap Fund 34,000.000 291.718 20-Feb-2026 125.00 36,464.75 CAMS\n(erstwhile Bluechip Fund) - Direct Plan -\nGrowth (formerly ICICI Prudential Focused\nBluechip Equity Fund) (Non-Demat)\n31149674/02 INF109K01Z71 P8133 - ICICI Prudential US Bluechip Equity 15,000.000 226.094 20-Feb-2026 83.81 18,948.94 CAMS\nFund - Direct Plan - Growth (Non-Demat)\n31149674/02 INF109K015M0 P8034 - ICICI Prudential Smallcap Fund - 6,500.000 68.658 20-Feb-2026 95.24 6,538.99 CAMS\nDirect Plan - Growth (formerly ICICI\nPrudential Indo Asia Equity Fund) (Non\n-Demat)\n31149674/02 INF109K01Y07 P8017 - ICICI Prudential Equity & Debt 21,000.000 51.751 20-Feb-2026 455.44 23,569.48 CAMS\nFund - Direct Plan - Growth (formerly ICICI\nPrudential Balanced Fund) (Non-Demat)\n31149674/02 INF109KC1U50 P9656 - ICICI Prudential NASDAQ 100 Index 1,000.000 48.716 20-Feb-2026 19.8030 964.72 CAMS\nFund - Direct Plan - Growth (Non-Demat)\n31149674/02 INF109K012K1 P8176 - ICICI Prudential Value Fund 20,100.000 39.288 20-Feb-2026 538.89 21,171.91 CAMS\n(erstwhile Value Discovery Fund) - Direct\nPlan - Growth (Non-Demat)\n31149674/02 INF109KC1Z55 P9671 - ICICI Prudential Strategic Metal 1,000.000 37.167 20-Feb-2026 29.6501 1,102.01 CAMS\nand Energy Equity Fund of Fund Direct Plan\nGrowth (Non-Demat)\n31149674/02 INF109K014O9 P8030 - ICICI Prudential Multicap Fund - 20,500.000 24.497 20-Feb-2026 902.87 22,117.61 CAMS\nDirect Plan - Growth (Non-Demat)\n31149674/02 INF109K011N7 P8182 - ICICI Prudential MidCap Fund - 1,000.000 2.765 20-Feb-2026 360.08 995.62 CAMS\nDirect Plan - Growth (Non-Demat)\n31041912303/0INF205K01NG5 120PSD1G - Invesco India PSU Equity Fund - 1,000.000 12.674 20-Feb-2026 81.68 1,035.21 KFINTECH\nDirect Plan Growth\n31041912303/0INF205K01KY4 120BFD1G - Invesco India Financial 500.000 2.798 20-Feb-2026 177.15 495.67 KFINTECH\nServices Fund - Direct Plan Growth\n31041912303/0INF205K01MV6 120MCD1G - Invesco India Midcap Fund - 500.000 2.257 20-Feb-2026 217.62 491.17 KFINTECH\nDirect Plan Growth\n15646701/40 INF174K01LT0 K123D - Kotak Midcap Fund- Direct Plan - 6,500.000 43.577 20-Feb-2026 158.610 6,911.75 CAMS\nGrowth (Erstwhile Kotak Emerging Equity\nScheme) (Non-Demat)\n15646701/40 INF174K01LW4 K143D - Kotak Global Emerging Market 1,000.000 26.642 20-Feb-2026 37.777 1,006.45 CAMS\nOverseas Equity Omni FOF Direct Plan -\nGrowth (Non-Demat)\n57734963325/0INF397L01BU4 102IGG1G - LIC MF Gold ETF Fund of Fund 6,000.000 201.473 20-Feb-2026 42.0280 8,467.51 KFINTECH\n(Formerly IDBI MF Gold Fund) FOF - Direct\nPlan\n91019177616/0INF247L01BQ9 127MPGDG - Motilal Oswal Nifty Microcap 16,500.000 974.152 20-Feb-2026 15.8711 15,460.86 KFINTECH\n250 Index Fund - Direct Plan Growth\n91019177616/0INF247L01189 127MFGDG - Motilal Oswal Focused Fund - 21,900.530 462.413 20-Feb-2026 50.5155 23,359.02 KFINTECH\nDirect Plan Growth\n91019177616/0INF247L01445 127FMGDG - Motilal Oswal Midcap Fund - 29,000.000 262.749 20-Feb-2026 105.4926 27,718.08 KFINTECH\nDirect Plan Growth\nPage 2 of 8"
+        },
+        {
+            "page_number": 3,
+            "text": "7101-eviL\n4.3V:noisreV\n338431622012-SWSACSMAC\nConsolidated Account Summary\nAs on 21-Feb-2026\nFolio No. ISIN Scheme Name Cost Value Unit Balance NAV Date NAV Market Value Registrar\n(INR) (INR) (INR)\n91019177616/0INF247L01DW3 127FSGDG - Motilal Oswal Nifty MidSmall 1,000.000 76.124 20-Feb-2026 13.6699 1,040.61 KFINTECH\nFinancial Services Index Fund - Direct Plan\nGrowth\n91019177616/0INF247L01CW5 127DIGDG - Motilal Oswal Nifty India 500.000 47.007 20-Feb-2026 10.6250 499.45 KFINTECH\nDefence Index Fund - Direct Growth\n91019177616/0INF247L01EB5 127CMGDG - Motilal Oswal Nifty Capital 500.000 44.792 20-Feb-2026 11.1020 497.28 KFINTECH\nMarket Index Fund - Direct Plan Growth\n91019177616/0INF247L01BF2 127S3GDG - Motilal Oswal BSE Enhanced 1,000.000 34.992 20-Feb-2026 30.2248 1,057.63 KFINTECH\nValue Index Fund - Direct Growth\n477320100701/0INF204K01K15 RMFSCAGG - NIPPON INDIA SMALL CAP 14,750.000 80.237 20-Feb-2026 183.3340 14,710.17 KFINTECH\nFUND - DIRECT GROWTH PLAN GROWTH\nOPTION\n477320100701/0INF204K01E54 RMFGFAGG - NIPPON INDIA GROWTH MID 30,000.000 7.135 20-Feb-2026 4,741.7743 33,832.56 KFINTECH\nCAP FUND - DIRECT GROWTH PLAN\nGROWTH OPTION\n477320100701/0INF204K01F20 RMFGSAGG - NIPPON INDIA VISION LARGE & 3,000.000 2.030 20-Feb-2026 1,605.2901 3,258.74 KFINTECH\nMID CAP FUND - DIRECT GROWTH PLAN\nGROWTH OPTION\n14539241 INF879O01027 PP001ZG - Parag Parikh Flexi Cap Fund - 30,000.000 344.243 20-Feb-2026 92.9299 31,990.47 CAMS\nDirect Plan Growth (formerly Parag Parikh\nLong Term Value Fund) (Non-Demat)\n51054574946/0INF966L01887 166OFDGG - quant Mid Cap Fund - Direct 7,000.000 27.397 20-Feb-2026 221.3408 6,064.07 KFINTECH\nPlan\n51054574946/0INF966L01689 166IBDGG - quant Small Cap Fund - Direct 1,000.000 3.886 20-Feb-2026 261.0658 1,014.50 KFINTECH\nPlan Growth\n51060066151/0INF966L01689 166IBDGG - quant Small Cap Fund - Direct 7,000.000 25.280 20-Feb-2026 261.0658 6,599.74 KFINTECH\nPlan Growth\n9774204433/0 INF082J01150 123QSGPG - Quantum Gold Savings Fund - 1,000.000 18.034 20-Feb-2026 59.0112 1,064.21 KFINTECH\nDirect Plan Growth\n36444497 INF200K01RV6 LD034G - SBI Technology Opportunities 37,000.000 158.637 20-Feb-2026 227.9008 36,153.50 CAMS\nFund Direct Growth (formerly SBI IT Fund)\n(Non-Demat)\n36444497 INF200K01T51 LD346G - SBI Small Cap Fund Direct Growth 15,927.920 84.485 20-Feb-2026 186.2228 15,733.03 CAMS\n(formerly SBI Small & Midcap Fund) (Non\n-Demat)\n36444497 INF200K01TE8 LD055A - SBI Nifty Index Fund - Direct Plan 18,000.000 80.980 20-Feb-2026 237.6691 19,246.44 CAMS\n- Growth (Non-Demat)\n36444497 INF200K01RM5 LD033G - SBI Consumption Opportunities 16,000.000 45.369 20-Feb-2026 335.2435 15,209.66 CAMS\nFund Direct Growth (formerly SBI FMCG\nFund) (Non-Demat)\n36444497 INF200KB1688 LD698G - SBI BSE PSU Bank Index Fund - 500.000 33.044 20-Feb-2026 15.4380 510.13 CAMS\nDirect Growth (Non-Demat)\n36444497 INF200K01SB6 LD094G - SBI Comma Fund - Direct Plan - 500.000 4.024 20-Feb-2026 123.7931 498.14 CAMS\nGrowth (Non-Demat)\n61010910194/0INF903J01MJ3 176MCDG - SUNDARAM MID CAP FUND 10,000.000 7.121 20-Feb-2026 1,564.0919 11,137.90 KFINTECH\nDIRECT GROWTH\n10529826/27 INF277K011O1 TSCFGZ - Tata Small Cap Fund - Direct 16,500.000 380.819 20-Feb-2026 39.3194 14,973.57 CAMS\nPlan - Growth (Non-Demat)\n10529826/27 INF277KA1CO5 TCMGZ - Tata Nifty Capital Markets Index 500.000 39.119 20-Feb-2026 12.7123 497.29 CAMS\nFund Direct Plan Growth (Non-Demat)\n577388144434/0INF789F01SH5 108ASD2G - UTI Transportation & Logistics 500.000 1.465 20-Feb-2026 335.5260 491.55 KFINTECH\nFund - Direct Plan\nTotal 825,699.12 1,121,528.86\nPage 3 of 8"
+        },
+        {
+            "page_number": 4,
+            "text": "7101-eviL\n4.3V:noisreV\n338431622012-SWSACSMAC\nConsolidated Account Summary\nAs on 21-Feb-2026\nLoads and Fees\n101CFDGG - Canara Robeco Consumer Trends Fund - Direct Growth : Entry Load : For all investment amounts - Lumpsum/SIP/STP: NIL. Exit Load :W.e.f.01/01/2014 - 1.5 % if\nreedemed/switched out within 12 monthsfrom the date of allotment; 1 % if reedemed / switched out after 12 months but before 18 months from the date of allotment and NIL after\n18 months from the date of allotment.W.e.f.03/10/2016, Entry Load : NIL, Exit Load : 1% if redeemed/switched out within 1 year from the date of allotment and Nil if\nredeemed/switched out after 1year from the date of allotment.\n101ETDGG - Canara Robeco ELSS Tax Saver Fund - Direct Growth : Current Load Structure: NO Entry Load wef., 01.08.2009 for all Purchase/Switch-IN and SIP/STP newly\nregistering. Exit Load: Nil. Eligible for availing tax benefits under Section 80C of IT Act, 1961 subject to the limits and condition specified in Section 80C, read with Section 80CCE\nof the Act under ELSS,2005 vide notifications dt. 03.11.2005 and 13.12.2005. This investment is subject to a lock in period of 3 years from the date of allotment .\n101INDGG - Canara Robeco Infrastructure Fund - Direct Growth : Current Load Structure w.e.f. 24-Aug-2009 : Entry Load - Nil. No Entry/Exit load for switch between\nEquity/Balanced and Balanced/Equity Schemes. Load We.f. : 17/07/2010. Lump Sum/SIP/STP : 1% - if redeemed / switched out within 1 year from the date of allotment, NIL - if\nredeemed / switched out after 1 year from the date of allotment.\n101SCDGG - Canara Robeco Small Cap Fund - Direct Growth : Entry Load - Nil. Exit Load - 1% if redeemed / switched out within 365 days from the date of allotment.Nil - if\nredeemed / switched out after 365 days from the date of allotment.\n102IGG1G - LIC MF Gold ETF Fund of Fund(Formerly IDBI MF Gold Fund) FOF - Direct Plan : Entry Load: Not applicable ; Exit Load :1% for exit within 15 days from the date of\nallotment w.e.f 18th Sep 2023.Entry Load: Not applicable ; Exit Load :1% for exit within 12 months from the date of allotment.***Exit Load: Nil - for a period of 30 days from June\n20, 2023 to July 19, 2023 (both days inclusive) (up to 3.00 p.m. on [July 19, 2023]) on account of proposed merger schemes of IDBI Mutual Fund into Schemes of LIC Mutual\nFund\n108ASD2G - UTI Transportation & Logistics Fund - Direct Plan : Entry Load: NIL, W.e.f. 01/04/2021 Exit Load : 1.00% if redeemed before 30 days from the date of\ninvestment.No Exit load on or after 30 days from the date of investment.\n116FIDGG - Bank of India Manufacturing and Infrastructure Fund - Direct Growth : Current Load Structure : Entry Load - NIL,Exit load - For redemption/switch out upto 10% of\nthe initial units allotted -within 1 year from the date of allotment: \u201cNIL\u201dAny redemption/switch out - in excess of the above mentioned limit would be subject to an exit load of 1%,\nif the units are redeemed/switched out within 1 year from the date of allotment of units. If the units are redeemed/switched out after 1 year fromthe date of allotment of units : \u201cNil\n\u201d You may also call at our Customer Engagement Centre on 1800 103 2263 / 1800 266 2676 (Toll free) to know the load structure prevailing from time to time.\n118EDD1G - Edelweiss Europe Dynamic Equity Off-shore Fund - Direct Plan Growth : Entry Load NIL, Exit Load W.E.F. April 03,2023 If the units are redeemed /switched out on\nor before 90 days from the date of allotment - 1.00%If the units are redeemed /switched out after 90 days from the date of allotment -Nil\n118GCD1G - Edelweiss Greater China Equity Off-shore Fund - Direct Plan Growth : Entry Load NIL, Exit Load W.E.F. April 03,2023 If the units are redeemed /switched out on or\nbefore 90 days from the date of allotment - 1.00%If the units are redeemed /switched out after 90 days from the date of allotment -Nil\n118UTD1G - Edelweiss US Technology Equity Fund of Fund - Direct Plan Growth : Entry Load NIL, Exit Load W.E.F. April 03,2023 If the units are redeemed /switched out on or\nbefore 90 days from the date of allotment - 1.00%If the units are redeemed /switched out after 90 days from the date of allotment -Nil\n120BFD1G - Invesco India Financial Services Fund - Direct Plan Growth : Entry Load - NIL, Exit Load: (a) If upto 10% of units allotted are redeemed (or) switched out within 1\nyear from the date of allotment - NIL. (b) Any redemption (or) switch-out of units in excess of 10% of units allotted - 1%.(c) If units are redeemed (or) switched out after 1 year\nfrom the date of allotment - NIL. The above exit load is not applicable for purchases made through IDCW Transfer Plan (DTP).Please Note that prevailing exit load structure at\nthe time of investment will be applicable for redemption (or) switch-out.\n120MCD1G - Invesco India Midcap Fund - Direct Plan Growth : Entry Load - NIL, Exit Load: (a) If upto 10% of units allotted are redeemed (or) switched out within 1 year from the\ndate of allotment - NIL. (b) Any redemption (or) switch-out of units in excess of 10% of units allotted - 1%.(c) If units are redeemed (or) switched out after 1 year from the date of\nallotment - NIL. The above exit load is not applicable for purchases made through IDCW Transfer Plan (DTP).Please note that prevailing exit load structure at the time of\ninvestment will be applicatble for redemption/switch out.\n120PSD1G - Invesco India PSU Equity Fund - Direct Plan Growth : Entry Load - NIL, Exit Load: (a) If upto 10% of units allotted are redeemed (or) switched out within 1 year from\nthe date of allotment - NIL. (b) Any redemption (or) switch-out of units in excess of 10% of units allotted - 1%.(c) If units are redeemed (or) switched out after 1 year from the\ndate of allotment - NIL. The above exit load is not applicable for purchases made through IDCW Transfer Plan (DTP).Please Note that prevailing exit load structure at the time of\ninevestment will be applicable for redemption/switch-out\n123QSGPG - Quantum Gold Savings Fund - Direct Plan Growth : Entry Load : Not Applicable, Exit load : Nil - w.e.f : 11-Dec-2017\n127CMGDG - Motilal Oswal Nifty Capital Market Index Fund - Direct Plan Growth : 1%- If redeemed on or before 15 days from the date of allotment.Nil- If redeemed after 15\ndays from the date of allotment.\n127DIGDG - Motilal Oswal Nifty India Defence Index Fund - Direct Growth : Entry Load: Nil, Exit Load: 1% -If redeemed or switched out on or before 15 days from the date of\nallotment.Nil - If redeemed after 15 days from the date of allotment.\n127FMGDG - Motilal Oswal Midcap Fund - Direct Plan Growth : Entry Load: Nil, Exit Load : 1% - If redeemed on or before 365 days from the date of allotment for Subscription\nreceived Wef 18-Mar-2024Nil - If redeemed after 365 days from the date of allotment.Entry Load: Nil, Exit Load: 1% -If redeemed or switched out on or before 15 days from the\ndate of allotment for Subscription received till 17-Mar-2024.Nil - If redeemed after 15 days from the date of allotment.\n127FSGDG - Motilal Oswal Nifty MidSmall Financial Services Index Fund - Direct Plan Growth : 1%- If redeemed on or before 15 days from the date of allotment.Nil- If redeemed\nafter 15 days from the date of allotment.Nil - If redeemed after 15 days from the date of allotment.\n127MFGDG - Motilal Oswal Focused Fund - Direct Plan Growth : Entry Load: Nil, Exit Load : 1% - If redeemed on or before 365 days from the date of allotment for Subscription\nreceived Wef 10-Jul-2024.Nil - If redeemed after 365 days from the date of allotment.Entry Load: Nil, Exit Load: 1% -If redeemed or switched out on or before 15 days from the\ndate of allotment for Subscription received till 09-July-2024.Nil - If redeemed after 15 days from the date of allotment.\n127MPGDG - Motilal Oswal Nifty Microcap 250 Index Fund - Direct Plan Growth : Entry Load: Nil, Exit Load 1%- If redeemed on or before 15 days from the date of allotment.Nil-\nIf redeemed after 15 days from the date of allotment\n127S3GDG - Motilal Oswal BSE Enhanced Value Index Fund - Direct Growth : Entry Load: Nil, Exit Load: 1% -If redeemed or switched out on or before 15 days from the date of\nallotment.Nil- If redeemed or switched out after 15 days from the date of allotment.\n128GCDGG - Axis Greater China Equity Fund of Fund Direct Growth : Entry Load : NIL. Exit Load: w.e.f., 11/02/2021 If redeemed / switched-out within 12 months from the date\nof allotment - For 10% of investment: Nil For remaining investment: 1% FIFO basis\n166IBDGG - quant Small Cap Fund - Direct Plan Growth : Entry Load NIL, Exit Load - 1.00% if redeemed with in 365 days from the date of allotment.NIL if redeemed after 365\ndays from the date of allotment of units.\n166OFDGG - quant Mid Cap Fund - Direct Plan : Entry Load NIL, Exit Load - 0.50% if redeemed with in 3 months from the date of allotment w.e.f 08/08/2021NIL if redeemed\nafter 3 months from the date of allotment of units.Please Note that prevailing exit load structure at the time of investment will be applicable for redemption/switch-out.\n176MCDG - SUNDARAM MID CAP FUND DIRECT GROWTH : Entry Load Nil, Exit Load: W.E.F Dec 31, 2021 Upto 25% of Units purchased/ switchin - NIL In excess of the\nabove: 1% if redeemed/ SWP/STP within 365 days from the date of allotment. NIL if redeemed /SWP/STP after 365 daysfrom the date of allotment\nB129Y - Aditya Birla Sun Life Nifty India Defence Index Fund- Direct Growth (Non-Demat) : Entry Load: Nil: Exit Load:For redemption / switch-out of units on or before 30 days\nfrom the date of allotment: 0.05% of applicable NAV.For redemption / switch-out of units after 30 days from the date of allotment : NIL \"Please ensure that your account\ninformation is up to date. If there are any changes to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update\nthem immediately.\"\nB66Y - Aditya Birla Sun Life PSU Equity Fund Direct-Growth (Non-Demat) : WEF 17-Nov-2020 For redemption/switch out of units on or before 30 days from the date of allotment:\n1.00% of applicable NAV. For redemption/switch out of units after 30 days from the date of allotment: Nil Note: The exit load rate levied at the time of redemption/switch-out of\nunits will be the rate prevailing at the time of allotment of the corresponding units. Customers may request for a separate Exit Load Applicability Report by calling our toll free\nnumbers 1800-270-7000 or from any of our Investor Service Centers. Important note - The last date to link Aadhaar and Permanent Account Number (PAN) has been extended\nby the government until 31 March 2023. Kindly link your Aadhar to your PAN prior to the aforesaid deadline to avoid for higher TDS on your income distribution or capital\nwithdrawals. Future transactions may also be restricted. For more details, please visit income tax portal. Kindly ignore if your PAN is already linked to Aadhaar. \"Please ensure\nthat your account information is up to date. If there are any changes to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information\netc. kindly update them immediately.\"\nD785 - DSP Natural Resources and New Energy Fund - Direct Plan - Growth (Non-Demat) : Exit Load: Nil. \"Please ensure that your account information is up to date. If there are\nany changes to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nPage 4 of 8"
+        },
+        {
+            "page_number": 5,
+            "text": "7101-eviL\n4.3V:noisreV\n338431622012-SWSACSMAC\nConsolidated Account Summary\nAs on 21-Feb-2026\nLoads and Fees\nD788 - DSP Small Cap Fund - Direct Plan - Growth (formerly DSP Micro Cap Fund) (Non-Demat) : Exit Load: 1% if redeemed/switched within 12 months. NIL after 12 months. \"\nPlease ensure that your account information is up to date. If there are any changes to your KYC details like address, contact details, occupation, income, PEP status,\nFATCA/CRS information etc. kindly update them immediately.\"\nD869 - DSP Nifty Next 50 Index Fund - Dir - Growth (Non-Demat) : Exit Load: Nil. \"Please ensure that your account information is up to date. If there are any changes to your\nKYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nD922 - DSP Nifty Private Bank Index Fund - Direct - Growth (Non-Demat) : Entry & Exit Load - Nil. \"Please ensure that your account information is up to date. If there are any\nchanges to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nFTI484 - Franklin Asian Equity Fund - Direct Plan - Growth (Non-Demat) : Entry Load - Nil; W.e.f 15/01/2020 Exit Load: 1% if redeemed/switched-out within 1 Year from the date\nof allotment: For SIP/STP, basis registration date \"Please ensure that your account information is up to date. If there are any changes to your KYC details like address, contact\ndetails, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nH02T - HDFC Flexi Cap Fund - Direct Plan - Growth Option (Non-Demat) : \"HDFC Equity Fund has undergone a change in Fundamental Attributes viz. w.e.f. January 29th, 2021\nand the scheme shall be managed as HDFC Flexi Cap Fund. Current Load Structure : Entry Load: Not Applicable. Exit Load: In respect of each purchase/switch-in of units, an\nExit load of 1% if units are redeemed/switched-out within 12 Months from the date of allotment. No Exit Load if units are redeemed /switched-out after 12 Months. The rate of exit\nload levied on units redeemed will be the rate prevailing at the time of allotment of the units. For further details visit www.hdfcfund.com (under Investor Corner) or contact any of\nour Investor Service Centre. GST Identification Number : 27AAATH1809A1Z9. \"Please ensure that your account information is up to date. If there are any changes to your KYC\ndetails like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nH32T - HDFC ELSS Tax saver- Direct Plan - Growth Option (Non-Demat) : *Due to change in fundamental attributes of the Scheme w.e.f. May 23, 2018, the type of the Scheme\nhas been changed to an open-ended Equity Linked Savings Scheme with a statutory lock in of 3 years and tax benefit - Current Load Structure : Entry Load - Not Applicable. Exit\nLoad - Nil. This scheme qualifies for deduction u/s 80C of the Income-Tax Act, 1961(the \"Act\"), subject to the limits and conditions specified in Sec.80C read with Sec.80CCE of\nthe Act. \"Only those units which have completed the lock-in period would be reflected as available units to redeem\".\"Effective February 06, 2015, dividend(s) declared, if any,\nunder Dividend Option of the Scheme will be compulsorily paid out vide addendum date January 29, 2015\". For further details visit www.hdfcfund.com (under Investor Corner) or\ncontact any of our Investor Service Centre. GST Identification Number : 27AAATH1809A1Z9. \"Please ensure that your account information is up to date. If there are any\nchanges to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nH44T - HDFC Large Cap Fund - Direct Plan - Growth Option (formerly HDFC Top 100 Fund) (Non-Demat) : *Due to change in the Scheme Name of HDFC Top 100 Fund w.e.f.\nJan 01, 2024, the Scheme shall be managed as HDFC Large Cap Fund and type of the scheme has been changed to an Open-ended Equity Scheme predominantly investing in\nlarge cap stocks - Current Load Structure : Entry Load - Nil. Exit Load : 1% if units are redeemed/swtiched-out within 1 year; No Exit Load if units are redeemed /switched-out\nafter 1 year from the date of investment with effect from May 08, 2015. The rate of exit load levied on units redeemed will be the rate prevailing at the time of allotment of the\nunits. For further details visit www.hdfcfund.com (under Investor Corner) or contact any of our Investor Service Centre. GST Identification Number : 27AAATH1809A1Z9 \"Please\nensure that your account information is up to date. If there are any changes to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS\ninformation etc. kindly update them immediately.\"\nHACG1G - HDFC Small Cap Fund - Direct Growth Plan (Non-Demat) : *Due to change in fundamental attributes of the Scheme w.e.f. May 23, 2018, the type of the Scheme has\nbeen changed to an open-ended equity scheme predominantly investing in small cap stocks. Current Load Structure - Entry Load: Not Applicable; Exit Load: 1% if units are\nredeemed/switched-out within 1 year from the allotment date; No Exit Load if units are redeemed /switched-out after 1 year. The rate of exit load levied on units\nredeemed/switched-out will be the rate prevailing at the time of allotment of the units. For further details visit www.hdfcfund.com or contact any of our Investor Service Centre.\nGST Identification Number : 27AAATH1809A1Z9 \"Please ensure that your account information is up to date. If there are any changes to your KYC details like address, contact\ndetails, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nHCORGT - HDFC Focused Fund - Direct Plan - Growth Option (formerly HDFC Core and Satellite Fund) (Non-Demat) : \"*Due to change in the Scheme Name and fundamental\nattributes of HDFC Core & Satellite Fund w.e.f. May 23, 2018, the Scheme shall be managed as HDFC Focused 30 Fund and type of the scheme has been changed to an open-\nended Equity Scheme investing inmaximum 30 stocks in large-cap, mid-cap andsmall-cap category (i.e. Multi-Cap),w.e.f 27.06.25 the scheme name changed to HDFC Focused\nFund - Current Load Structure : Entry Load - Nil. Exit Load : 1% if units are redeemed/swtiched-out within 1 year; No Exit Load if units are redeemed /switched-out after 1 year\nfrom the date of investment with effect from May 08, 2015. The rate of exit load levied on units redeemed will be the rate prevailing at the time of allotment of the units. For\nfurther details visit www.hdfcfund.com (under Investor Corner) or contact any of our Investor Service Centre. GST Identification Number : 27AAATH1809A1Z9 \"\"\"Please ensure\nthat your account information is up to date. If there are any changes to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information\netc. kindly update them immediately.\"\"\"\"\"\nHGFG1G - HDFC Large and Mid Cap Fund - Direct Growth Plan (formerly HDFC Large Cap Fund) (Non-Demat) : *Due to change in the Scheme Name and fundamental\nattributes of HDFC Large Cap Fund w.e.f. May 23, 2018, the Scheme shall be managed as HDFC Growth Opportunities Fund and type of the scheme has been changed to an\nopen ended equity scheme investing in both large cap and mid cap stocks. In respect of each purchase / switch-in of units, an Exit Load of 1.00% is payable if Units are\nredeemed / switched-out within 1 year from the date of allotment.No Exit Load is payable if Units are redeemed / switched-out after 1 year from the date of allotment. The rate of\nexit load levied on units redeemed will be the rate prevailing at the time of allotment of the units. For further details visit www.hdfcfund.com (under Investor Corner) or contact any\nof our Investor Service Centre. GST Identification Number : 27AAATH1809A1Z9 \"Please ensure that your account information is up to date. If there are any changes to your\nKYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nHGFGT - HDFC Balanced Advantage Fund - Direct Plan - Growth Option (formerly HDFC Growth Fund, erstwhile HDFC Prudence Fund merged) (Non-Demat) : *Due to change\nin Scheme Name and the fundamental attributes of HDFC Growth Fund and merger of HDFC Prudence Fund therein, w.e.f. June 01, 2018 (close of business hours) , the\nscheme shall be managed as HDFC Balanced Advantage Fund (erstwhile HDFC Prudence Fund and HDFC Growth Fund), an open-ended scheme Balanced Advantage Fund.\nCurrent Load Structure : Entry Load - Nil. Exit Load : In respect of each purchase/switch-in of units from allotment date, Nil exit load upto 15% of the units (\"the limit\")\nredeemed/switched-out; 1% if units in excess of the limit are redeemed/switched-out within 1 year. No Exit Load if units are redeemed /switched-out after 1 year. Applicable for\nthe subscriptions made w.e.f. May 08, 2015. The rate of exit load levied on units redeemed will be the rate prevailing at the time of allotment of the units. For further details visit\nwww.hdfcfund.com (under Investor Corner) or contact any of our Investor Service Centre. GST Identification Number : 27AAATH1809A1Z9 \"Please ensure that your account\ninformation is up to date. If there are any changes to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update\nthem immediately.\"\nHHDDGR - HDFC Defence Fund Direct Growth (Non-Demat) : An open ended equity scheme investing in Defence & allied sector companies, Exit Load: In respect of each\npurchase/switch-in of units, an Exit load of 1% is payable if units are redeemed/switched-out within 1 year from the date of allotment. No Entry / Exit Load shall be levied on\nbonus units and Units allotted on Re-investment of Income Distribution cum Capital Withdrawal. In respect of Systematic Transactions such as SIP, GSIP, STP, FlexSTP, Swing\nSTP, Exit Load, if any, prevailing on the date of registration / enrolment shall be levied. For further details, visit www.hdfcfund.com (under Investor Corner) or contact any of our\nInvestor Service Centre. GST Identification Number: 27AAATH1809A1Z9. \"Please ensure that your account information is up to date. If there are any changes to your KYC\ndetails like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nHHNEDG - HDFC Nifty Top 20 Equal Weight Index Fund Direct Growth (Non-Demat) : An open ended scheme replicating/tracking Nifty Top 20 Equal Weight Index, Exit Load:\nNIL, No Entry / Exit Load shall be levied on bonus units and on Units allotted on reinvestment of Income Distribution cum Capital Withdrawal. In respect of Systematic\nTransactions such as SIP, STP, Exit Load, if any, prevailing on the date of registration / enrolment shall be levied. For further details, visit www.hdfcfund.com (under Investor\nCorner) or contact any of our Investor Service Centre. GST Identification Number: 27AAATH1809A1Z9. \"Please ensure that your account information is up to date. If there are\nany changes to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nHHREDP - HDFC Retirement Savings Fund - Equity Plan - Direct Plan -Growth Option (Non-Demat) : *Due to change in fundamental attributes of the Scheme w.e.f. close of\nbusiness hours on June 01, 2018, the type of the Scheme has been changed to an open ended retirement solution oriented scheme having a lock-in of 5 years or till retirement\nage (whichever is earlier). Current Load Structure : Entry Load - Not Applicable. Exit Load \u00bf Nil w.e.f. June 15, 2018. This scheme qualifies for deduction u/s 80C of the Income-\ntax Act, 1961. Only those units which have completed the lock-in period would be reflected as available units to redeem. For further details, visit www.hdfcfund.com (under\nInvestor Corner) or contact any of our Investor Service Centre. GST Identification Number : 27AAATH1809A1Z9. \"Please ensure that your account information is up to date. If\nthere are any changes to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nHMCOGT - HDFC Mid Cap Fund - Direct Plan - Growth Option (Non-Demat) : *Due to change in fundamental attributes of the Scheme w.e.f. May 23, 2018, the type of the\nScheme has been changed to an Open-ended Equity Scheme predominantly investing in mid cap stocks w.e.f. 25.06.10, w.e.f 27.06.25 the scheme name changed to HDFC Mid\nCap Fund - Current Load Structure : Entry Load: Not Applicable. Exit Load: Redemption/Switch-out within 1 Year of allotment - 1%. The rate of exit load levied on units redeemed\nwill be the rate prevailing at the time of allotment of the units. For further details visit www.hdfcfund.com (under Investor Corner) or contact any of our Investor Service Centre.\nGST Identification Number : 27AAATH1809A1Z9 \"Please ensure that your account information is up to date. If there are any changes to your KYC details like address, contact\ndetails, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nPage 5 of 8"
+        },
+        {
+            "page_number": 6,
+            "text": "7101-eviL\n4.3V:noisreV\n338431622012-SWSACSMAC\nConsolidated Account Summary\nAs on 21-Feb-2026\nLoads and Fees\nHMTOGT - HDFC Corporate Bond Fund - Direct Plan - Growth Option (formerly HDFC Medium term Opportunities Fund, erstwhile HDFC Gilt Fund Short Term,HDFC Floating\nRate Income Fund - Long Term Plan merged) (Non-Demat) : *Due to change in the Scheme name and fundamental attributes of HDFC Medium Term Opportunities Fund and\nmerger of HDFC Floating Rate Income Fund - Long Term Plan and HDFC Gilt Fund - Short Term Plan therein w.e.f. May 08, 2018 (close of business hour), the scheme shall be\nmanaged as HDFC Corporate Bond Fund, An open ended debt scheme predominantly investing in AA+ and above rated corporate bonds. Current Load Structure : Entry Load:\nNot Applicable; Exit Load: NIL for the subscriptions made w.e.f. 29-Mar-2018.The rate of exit load levied on units redeemed will be the rate prevailing at the time of allotment of\nthe units. For Systematic Transactions, the exit load shall be at the rate prevailing at the time of enrolment. For further details visit www.hdfcfund.com (under Investor Corner) or\ncontact any of our Investor Service Centre. GST Identification Number : 27AAATH1809A1Z9 \"Please ensure that your account information is up to date. If there are any changes\nto your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nHSLFDG - HDFC Silver ETF Fund of Fund Direct Growth (Non-Demat) : An open ended Fund of Fund scheme investing in HDFC Silver ETF.An Exit Load of 1% is applicable if\nUnits are redeemed / switched-out within 15 days from the date of allotment. No Exit Load is applicable if the Units are redeemed / switched-out after 15 days from the date of\nallotment. The rate of exit load levied on units redeemed will be the rate prevailing at the time of allotment of the units.. For further details visit www.hdfcfund.com (under Investor\nCorner) or contact any of our Investor Service Centre. GST Identification Number : 27AAATH1809A1Z9 \"Please ensure that your account information is up to date. If there are\nany changes to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nIFMAFDG - 360 ONE Multi Asset Allocation Fund - Direct Plan - Growth (Non-Demat) : An open-ended Multi Asset Allocation.\"Please ensure that your account information is up\nto date. If there are any changes to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them\nimmediately.\"\nK123D - Kotak Midcap Fund- Direct Plan - Growth (Erstwhile Kotak Emerging Equity Scheme) (Non-Demat) : Entry Load - Nil, Exit Load (w.e.f. 13-May-2020) - For\nredemption/switch out of units upto 10% of the initial investment amount (limit) purchased or switched-in within 1 year from the date of allotment - NIL. If Units redeemed or\nswitched out are in excess of the limit within 1 year from the date of allotment : 1%. If units redeemed or switched out on or after 1 year from the date of allotment: NIL. \"Please\nensure that your account information is up to date. If there are any changes to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS\ninformation etc. kindly update them immediately.\"\nK143D - Kotak Global Emerging Market Overseas Equity Omni FOF Direct Plan - Growth (Non-Demat) : Entry Load - Nil, Exit Load (w.e.f. 24-May-2021) - For redemption/switch\nout of units upto 10% of the initial investment unit (limit) purchased or switched-in within 1 year from the date of allotment - NIL. If Units redeemed or switched out are in excess\nof the limit within 1 year from the date of allotment : 1%. If units redeemed or switched out on or after 1 year from the date of allotment: NIL. \"Please ensure that your account\ninformation is up to date. If there are any changes to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update\nthem immediately.\"\nLD033G - SBI Consumption Opportunities Fund Direct Growth (formerly SBI FMCG Fund) (Non-Demat) : \"Entry Load : N.A.; Exit Load - W.e.f. 15-Jan-2019: 0.10% if\nredeemed/switched within 30 Calendar days from the date of investment; NIL if redeemed/switched after 30 Calendar days from the date of investment. STT @ 0.001% is\napplicable at the time of redemption / switch. For applicability of exit load structure for specific transaction, please refer to Addendum issued from time to time.**Scheme name of\n\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"SBI FMCG Fund\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" has been changed to \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"SBI Consumption Opportunities Fund\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" with effect from 16th May 2018.\" W.e.f. 1st July\n2020, Stamp Duty @ 0.005% is applicable on allotment of units. As per SEBI guidelines, w.e.f. February 01, 2021, applicable NAV for allotment of units shall be based on time of\nreceipt of transaction and funds available for utilization upto the cut-off time. TDS shall be deducted (wherever applicable) as per rates under New Tax Regime. Differential tax if\nany, should be evaluated by investor(s), basis relevant tax provisions.\nLD034G - SBI Technology Opportunities Fund Direct Growth (formerly SBI IT Fund) (Non-Demat) : \"Entry Load : N.A.; Exit Load - W.e.f. 15-JUL-2016: 0.50% if\nredeemed/switched within 15 Days from the date of allotment; NIL if redeemed/switched after 15 Days from the date of allotment. STT @ 0.001% is applicable at the time of\nredemption / switch. For applicability of exit load structure, please refer to SAI / SID/ KIM/Addendum issued from time to time.**Scheme name of \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"SBI IT\nFund\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" has been changed to \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"SBI Technology Opportunities Fund\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" with effect from 16th May 2018.\" W.e.f. 1st July 2020, Stamp Duty @\n0.005% is applicable on allotment of units. As per SEBI guidelines, w.e.f. February 01, 2021, applicable NAV for allotment of units shall be based on time of receipt of transaction\nand funds available for utilization upto the cut-off time. TDS shall be deducted (wherever applicable) as per rates under New Tax Regime. Differential tax if any, should be\nevaluated by investor(s), basis relevant tax provisions.\nLD055A - SBI Nifty Index Fund - Direct Plan - Growth (Non-Demat) : Entry Load : N.A.; Exit Load - W.e.f. 30.Nov.2017: 0.20% if redeemed/ switched out within 15 days from the\ndate of investment; NIL if redeemed/ switched after 15 days from the date of investment. STT @ 0.001% is applicable at the time of redemption / switch. For applicability of exit\nload structure for specific transaction, please refer to Addendum issued from time to time. W.e.f. 1st July 2020, Stamp Duty @ 0.005% is applicable on allotment of units. As per\nSEBI guidelines, w.e.f. February 01, 2021, applicable NAV for allotment of units shall be based on time of receipt of transaction and funds available for utilization upto the cut-off\ntime. TDS shall be deducted (wherever applicable) as per rates under New Tax Regime. Differential tax if any, should be evaluated by investor(s), basis relevant tax provisions.\nLD094G - SBI Comma Fund - Direct Plan - Growth (Non-Demat) : Entry Load: N.A.; Exit Load - W.e.f. 07-June-2021: 0.50% if redeemed/switched within 30 Calendar days from\nthe date of investment; NIL if redeemed/switched after 30 Calendar days from the date of investment. STT @ 0.001% is applicable at the time of redemption / switch. For\napplicability of exit load structure for specific transaction, please refer to Addendum issued from time to time. **Scheme name of \"SBI Magnum Comma Fund\" has been changed\nto \"SBI Comma Fund\" with effect from 30th June 2025. W.e.f. 1st July 2020, Stamp Duty @ 0.005% is applicable on allotment of units. As per SEBI guidelines, w.e.f. February\n01, 2021, applicable NAV for allotment of units shall be based on time of receipt of transaction and funds available for utilization upto the cut-off time. TDS shall be deducted\n(wherever applicable) as per rates under New Tax Regime. Differential tax if any, should be evaluated by investor(s), basis relevant tax provisions.\nLD346G - SBI Small Cap Fund Direct Growth (formerly SBI Small & Midcap Fund) (Non-Demat) : \"Entry Load : N.A.; Exit Load - W.e.f. 08-AUG-2011: 1% - if the units are\nredeemed/switched-out within 1 Year from the date of allotment; Nil - if the units are redeemed/switched-out after 1 year from the date of allotment. STT @ 0.001% is applicable\nat the time of redemption / switch. For applicability of exit load structure, please refer to Addendum issued from time to time. **Scheme name of \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"SBI Small & Midcap\nFund\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" has been changed to \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"SBI Small Cap Fund\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" with effect from 16th May 2018.\" W.e.f. 1st July 2020, Stamp Duty @ 0.005% is applicable\non allotment of units. As per SEBI guidelines, w.e.f. February 01, 2021, applicable NAV for allotment of units shall be based on time of receipt of transaction and funds available\nfor utilization upto the cut-off time. TDS shall be deducted (wherever applicable) as per rates under New Tax Regime. Differential tax if any, should be evaluated by investor(s),\nbasis relevant tax provisions.\nLD698G - SBI BSE PSU Bank Index Fund - Direct Growth (Non-Demat) : Entry Load: N.A.; Exit Load - 0.25% if redeemed / switched out on or before 15 days from the date of\nallotment; Nil after 15 days from the date of allotment. For applicability of load structure, please refer to SAI / SID / KIM / Addendum issued from time to time. W.E.F. 1st June\n2013, STT @ 0.001% is applicable at the time of redemption / switchover. W.E.F. 1st July 2020, Stamp Duty @ 0.005% is applicable on allotment of units. TDS shall be\ndeducted (wherever applicable) as per rates under New Tax Regime. Differential tax if any, should be evaluated by investor(s), basis relevant tax provisions.\nOHEFG - HSBC Large Cap Fund - Direct Growth (Formerly known as HSBC Large cap Equity Fund - Growth Direct Plan) (Formerly HSBC Equity Fund) (Non-Demat) : Exit\nLoad:If the units redeemed or switched out are upto 10% of the units purchased or switched in (the limit) within 1 year from the date of allotment Nil. If units redeemed or\nswitched out are over and above the limit within 1 year from the date of allotment 1%. If units are redeemed or switched out on or after 1 year from the date of allotment Nil. A\nswitch-out or a withdrawal under SWP may also attract an Exit Load like any Redemption.No Exit load will be chargeable in case of switches made between different options of\nthe Scheme.No Exit load will be chargeable in case of Units allotted on account of dividend reinvestments, if any. \"Please ensure that your account information is up to date. If\nthere are any changes to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nOHLEG - HSBC Large & Mid Cap Fund - Direct Growth (Formerly known as HSBC Large and Midcap Equity Fund Direct Plan Growth) (Non-Demat) : Exit Load :If the units\nredeemed or switched out are upto 10% of the units purchased or switched in (the limit) within 1 year from the date of allotment Nil. If units redeemed or switched out are over\nand above the limit within 1 year from the date of allotment 1%. If units are redeemed or switched out on or after 1 year from the date of allotment Nil. A switch-out or a\nwithdrawal under SWP may also attract an Exit Load like any Redemption.No Exit load will be chargeable in case of switches made between different options of the Scheme.No\nExit load will be chargeable in case of Units allotted on account of dividend reinvestments, if any. \"Please ensure that your account information is up to date. If there are any\nchanges to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nOLEBDG - HSBC Small Cap Fund - Direct Growth (Formerly known as L&T Emerging Businesses Fund Direct Growth) (Non-Demat) : Exit Load :If the units redeemed or\nswitched out are upto 10% of the units purchased or switched in (the limit) within 1 year from the date of allotment Nil. If units redeemed or switched out are over and above the\nlimit within 1 year from the date of allotment 1%. If units are redeemed or switched out on or after 1 year from the date of allotment Nil. A switch-out or a withdrawal under SWP\nmay also attract an Exit Load like any Redemption.No Exit load will be chargeable in case of switches made between different options of the Scheme.No Exit load will be\nchargeable in case of Units allotted on account of dividend reinvestments, if any. \"Please ensure that your account information is up to date. If there are any changes to your\nKYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nPage 6 of 8"
+        },
+        {
+            "page_number": 7,
+            "text": "7101-eviL\n4.3V:noisreV\n338431622012-SWSACSMAC\nConsolidated Account Summary\nAs on 21-Feb-2026\nLoads and Fees\nP8017 - ICICI Prudential Equity & Debt Fund - Direct Plan - Growth (formerly ICICI Prudential Balanced Fund) (Non-Demat) : Current : Entry Load - Nil. Exit Load w.e.f 02-May-\n2022 [including SIP,STP,SWP&Micro(SIP) wherever available] - If redeemed or switched out upto 30% of the units within 1 year - Nil, more than 30% of units within 1 Year - 1.0%\n, > 1 year - Nil. For lumpsum investment/switch in, the applicable load will be based on the load structure as on the date of investment/applicable NAV date. For SIP/STP\ntransactions, load for each transaction is based on the applicable load structure as on the registration date. For details, please refer to SID and Addenda available on\nwww.icicipruamc.com. \"Please ensure that your account information is up to date. If there are any changes to your KYC details like address, contact details, occupation, income,\nPEP status, FATCA/CRS information etc. kindly update them immediately.\"\nP8030 - ICICI Prudential Multicap Fund - Direct Plan - Growth (Non-Demat) : Current : Entry Load - Nil. Exit Load w.e.f 24-Aug-2018 [including SIP,STP,SWP&Micro(SIP)\nwherever available] - If redeemed or switched out Upto 12 months - 1.0%, > 12 Months - Nil. For lumpsum investment/switch in, the applicable load will be based on the load\nstructure as on the date of investment/applicable NAV date. For SIP/STP transactions, load for each transaction is based on the applicable load structure as on the registration\ndate. For details, please refer to SID and Addenda available on www.icicipruamc.com. \"Please ensure that your account information is up to date. If there are any changes to\nyour KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nP8034 - ICICI Prudential Smallcap Fund - Direct Plan - Growth (formerly ICICI Prudential Indo Asia Equity Fund) (Non-Demat) : Current : Entry Load - Nil. Exit Load w.e.f 16-Jul-\n2010 [including SIP,STP,SWP(SIP) wherever available] - If redeemed or switched out upto 1 year - 1.0%, > 1 year - Nil. For lumpsum investment/switch in, the applicable load will\nbe based on the load structure as on the date of investment/applicable NAV date. For SIP/STP transactions, load for each transaction is based on the applicable load structure as\non the registration date. For details, please refer to SID and Addenda available on www.icicipruamc.com. Scheme Name of ICICI Prudential Indo Asia Equity Fund has been\nchanged to ICICI Prudential Smallcap Fund with effect from May 28, 2018. \"Please ensure that your account information is up to date. If there are any changes to your KYC\ndetails like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nP8042 - ICICI Prudential Large Cap Fund (erstwhile Bluechip Fund) - Direct Plan - Growth (formerly ICICI Prudential Focused Bluechip Equity Fund) (Non-Demat) : Current : Entry\nLoad - Nil. Exit Load w.e.f 16-Jul-2010 [including SIP,STP,SWP&Micro(SIP) wherever available] - If redeemed or switched out upto 1 year - 1.0%, > 1 year - Nil. For lumpsum\ninvestment/switch in, the applicable load will be based on the load structure as on the date of investment/applicable NAV date. For SIP/STP transactions, load for each\ntransaction is based on the applicable load structure as on the registration date. For details, please refer to SID and Addenda available on www.icicipruamc.com. Scheme Name\nof ICICI Prudential Bluechip Fund has been changed to ICICI Prudential Large Cap Fund with effect from June 16, 2025. \"Please ensure that your account information is up to\ndate. If there are any changes to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nP8078 - ICICI Prudential Corporate Bond Fund - Direct Plan - Growth (formerly ICICI Prudential Ultra Short Term Plan) (Non-Demat) : Current : Entry Load - Nil. Exit Load w.e.f\n01-Jan-2015 [including SIP,STP,SWP(SIP) wherever available] if redeemed or switched out - Nil. For lumpsum investment/switch in, the applicable load will be based on the load\nstructure as on the date of investment/applicable NAV date. For SIP/STP transactions, load for each transaction is based on the applicable load structure as on the registration\ndate. For details, please refer to SID and Addenda available on www.icicipruamc.com. Scheme Name of ICICI Prudential Ultra Short Term Plan has been changed to ICICI\nPrudential Corporate Bond Fund with effect from May 28, 2018. \"Please ensure that your account information is up to date. If there are any changes to your KYC details like\naddress, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nP8133 - ICICI Prudential US Bluechip Equity Fund - Direct Plan - Growth (Non-Demat) : Current : Entry Load - Nil. Exit Load w.e.f 01-Jan-2019 [including SIP,STP,SWP&Micro\n(SIP) wherever available] - If redeemed or switched out within 1 month - 1%, after 1 month - Nil. For lumpsum investment/switch in, the applicable load will be based on the load\nstructure as on the date of investment/applicable NAV date. For SIP/STP transactions, load for each transaction is based on the applicable load structure as on the registration\ndate. For details, please refer to SID and Addenda available on www.icicipruamc.com. \"Please ensure that your account information is up to date. If there are any changes to\nyour KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nP8176 - ICICI Prudential Value Fund (erstwhile Value Discovery Fund) - Direct Plan - Growth (Non-Demat) : Current : Entry Load - Nil. Exit Load w.e.f 07-May-2013 [including\nSIP,STP,SWP&Micro(SIP) wherever available] - If redeemed or switched out upto 12 months - 1.0%, > 12 months - Nil. For lumpsum investment/switch in, the applicable load will\nbe based on the load structure as on the date of investment/applicable NAV date. For SIP/STP transactions, load for each transaction is based on the applicable load structure as\non the registration date. For details, please refer to SID and Addenda available on www.icicipruamc.com. Scheme Name of ICICI Prudential Value Discovery Fund has been\nchanged to ICICI Prudential Value Fund with effect from June 16, 2025. \"Please ensure that your account information is up to date. If there are any changes to your KYC details\nlike address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nP8182 - ICICI Prudential MidCap Fund - Direct Plan - Growth (Non-Demat) : Current : Entry Load - Nil. Exit Load w.e.f 18-May-2015 [including SIP,STP,SWP&Micro(SIP)\nwherever available] - If redeemed or switched out within 1 year - 1.0%, > 1 year - Nil. For lumpsum investment/switch in, the applicable load will be based on the load structure as\non the date of investment/applicable NAV date. For SIP/STP transactions, load for each transaction is based on the applicable load structure as on the registration date. For\ndetails, please refer to SID and Addenda available on www.icicipruamc.com. \"Please ensure that your account information is up to date. If there are any changes to your KYC\ndetails like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nP9656 - ICICI Prudential NASDAQ 100 Index Fund - Direct Plan - Growth (Non-Demat) : Current : Entry & Exit Load - Nil. For lumpsum investment/switch in, the applicable load\nwill be based on the load structure as on the date of investment/applicable NAV date. For SIP/STP transactions, load for each transaction is based on the applicable load\nstructure as on the registration date. For details, please refer to SID and Addenda available on www.icicipruamc.com. \"Please ensure that your account information is up to date.\nIf there are any changes to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nP9671 - ICICI Prudential Strategic Metal and Energy Equity Fund of Fund Direct Plan Growth (Non-Demat) : Current : Entry Load - Nil. Exit Load [including SIP,STP,SWP&Micro\n(SIP) wherever available] - If redeemed or switched out with in 1 Year - 1.00 %, more than 1 Year - Nil. For lumpsum investment/switch in, the applicable load will be based on\nthe load structure as on the date of investment/applicable NAV date. For SIP/STP transactions, load for each transaction is based on the applicable load structure as on the\nregistration date. For details, please refer to SID and Addendum available on www.icicipruamc.com. \"Please ensure that your account information is up to date. If there are any\nchanges to your KYC details like address, contact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nP9673 - ICICI Prudential Silver ETF FOF DP Growth (Non-Demat) : Current : Entry Load - Nil. Exit Load [including SIP,STP,SWP&Micro(SIP) wherever available] - If redeemed or\nswitched out upto 15 Days - 1.00 %, more than 15 Days - Nil. For lumpsum investment/switch in, the applicable load will be based on the load structure as on the date of\ninvestment/applicable NAV date. For SIP/STP transactions, load for each transaction is based on the applicable load structure as on the registration date. For details, please refer\nto SID and Addendum available on www.icicipruamc.com. \"Please ensure that your account information is up to date. If there are any changes to your KYC details like address,\ncontact details, occupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nPP001ZG - Parag Parikh Flexi Cap Fund - Direct Plan Growth (formerly Parag Parikh Long Term Value Fund) (Non-Demat) : Exit Load: Investors are requested to note that with\neffect from November 15, 2021, all new/prospective investments (including SIP/STP and SWP registered) in respect of each purchase / switch-in of units, 10% of the units may\nbe redeemed without any exit load from the date of allotment made on or after the aforesaid effective date. Please refer Notice cum addendum dated November 11, 2021\navailable on website https://amc.ppfas.com/downloads/addendum/ Any redemption or switch out in excess of the aforesaid limit shall be subject to the following exit load : Exit\nLoad of 2% is applicable, if Units are redeemed/switched-out on or before 365 days from the date of allotment, 1% if redeemed/Switched-out after 365 days but on or before 730\ndays from the date allotment and thereafter there is no exit load. \"Effective from July 01, 2020, stamp duty @ 0.005% will be deducted from the Net investment amount. Units\nwill be allotted for the balance amount. \"Please ensure that your account information is up to date. If there are any changes to your KYC details like address, contact details,\noccupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nRMFGFAGG - NIPPON INDIA GROWTH MID CAP FUND - DIRECT GROWTH PLAN GROWTH OPTION : For subscriptions received w.e.f. Feb 2nd, 2021, 1% exit load shall\nbe applicable for units redeemed on or before completion of one month from the date of allotment of units.And Nil thereafter. Redemption of units would be done on First in First\nout Basis (FIFO).For subscriptions prior to Feb 2nd, 2021, Exit load levied on the Units redeemed will be the rate prevailing at the time of the allotment of the Units.For Special\nproducts registrations, load for each transaction is based on the load structure applicable as on the registration date.\nRMFGSAGG - NIPPON INDIA VISION LARGE & MID CAP FUND - DIRECT GROWTH PLAN GROWTH OPTION : For subscriptions received w.e.f. Mar 17th, 2020, 10% of\nthe units allotted shall be redeemed without any exit load, 1% exit load shall be applicable for units redeemed in excess of such limit,on or before completion of 12 months from\nthe date of allotment of units. And Nil thereafter. Redemption of units would be done on First in First out Basis (FIFO).For subscriptions prior to Mar 17th, 2020, Exit load levied\non the Units redeemed will be the rate prevailing at the time of the allotment of the Units.For Special products registrations, load for each transaction is based on the load\nstructure applicable as on the registration date.\nRMFSCAGG - NIPPON INDIA SMALL CAP FUND - DIRECT GROWTH PLAN GROWTH OPTION : For subscriptions received w.e.f. Mar 22nd, 2024, 1% exit load shall be\napplicable for units redeemed on or before completion of one year from the date of allotment of units.And Nil thereafter. Redemption of units would be done on First in First out\nBasis (FIFO).For subscriptions prior to Mar 21st, 2024, Exit load levied on the Units redeemed will be the rate prevailing at the time of the allotment of the Units.For Special\nproducts registrations, load for each transaction is based on the load structure applicable as on the registration date.\nPage 7 of 8"
+        },
+        {
+            "page_number": 8,
+            "text": "7101-eviL\n4.3V:noisreV\n338431622012-SWSACSMAC\nConsolidated Account Summary\nAs on 21-Feb-2026\nLoads and Fees\nTCMGZ - Tata Nifty Capital Markets Index Fund Direct Plan Growth (Non-Demat) : Allotment of units would be subject to realization of credit. Current load structure: Exit Load:\n0.25% of the applicable NAV, if redeemed on or before expiry of 15 days from the date of allotment. The Entry/Exit load for investment will be as applicable as on the date of\nallotment / date of registration in case of SIP and STP.Switch-in will be processed based on the settlement cycle of the switch-out scheme. This scheme is to be considered as\nEquity oriented for taxation purpose. \"Please ensure that your account information is up to date. If there are any changes to your KYC details like address, contact details,\noccupation, income, PEP status, FATCA/CRS information etc. kindly update them immediately.\"\nTSCFGZ - Tata Small Cap Fund - Direct Plan - Growth (Non-Demat) : Allotment of units would be subject to realization of credit. Current load structure(w.e.f.19/08/2025): Exit\nLoad: 0.50% if redeemed on or before expiry of 30 days from the date of allotment. The Entry/Exit load for investment will be as applicable as on the date of allotment / date of\nregistration in case of SIP and STP.Switch-in will be processed based on the settlement cycle of the switch-out scheme. This scheme is to be considered as Equity oriented for\ntaxation purpose. \"Please ensure that your account information is up to date. If there are any changes to your KYC details like address, contact details, occupation, income, PEP\nstatus, FATCA/CRS information etc. kindly update them immediately.\"\nPage 8 of 8"
+        }
+    ]
+}
