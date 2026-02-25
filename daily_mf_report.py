@@ -813,9 +813,55 @@ EMAIL_TEMPLATE = """
         </ul>
 
         {% if top_n %}
-        <div class="section-header">
-            <span style="font-size: 18px; font-weight: 700; color: var(--primary);">🏆 Overall Top 200 Performance</span>
-        </div>
+        <details>
+            <summary>
+                🏆 Overall Top 200 Performance
+            </summary>
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 50px;">#</th>
+                            <th>Scheme Name</th>
+                            <th>Info</th>
+                            <th style="text-align: right;">Months</th>
+                            <th style="text-align: right;">12M XIRR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in top_n %}
+                        <tr>
+                            <td style="color: var(--text-muted); font-weight: 600;">{{ loop.index }}</td>
+                            <td>
+                                <span class="scheme-name">{{ row.schemeName }}</span>
+                            </td>
+                            <td>
+                                {% if row.isin_growth_link %}
+                                    <a href="{{ row.isin_growth_link }}" target="_blank" style="text-decoration: none; font-size: 10px; padding: 2px 4px; background: #eff6ff; color: #2563eb; border-radius: 4px; border: 1px solid #dbeafe; font-weight: 700;">G</a>
+                                {% endif %}
+                                {% if row.isin_div_link %}
+                                    <a href="{{ row.isin_div_link }}" target="_blank" style="text-decoration: none; font-size: 10px; padding: 2px 4px; background: #fef2f2; color: #dc2626; border-radius: 4px; border: 1px solid #fee2e2; font-weight: 700;">D</a>
+                                {% endif %}
+                                {% if row.isin_growth in invested_isins or row.isin_div_reinvestment in invested_isins %}
+                                    <span class="action-btn action-btn-invested">INVESTED</span>
+                                {% elif row.can_invest_growth == true %}
+                                    <span class="action-btn action-btn-invest">I</span>
+                                {% elif row.can_invest_growth == false %}
+                                    <span class="action-btn action-btn-divest">D</span>
+                                {% endif %}
+                            </td>
+                            <td style="text-align: right; font-weight: 500;">{{ row.months }}m</td>
+                            <td style="text-align: right;">
+                                <span class="xirr-val {{ 'positive' if row.xirr > 0 else '' }}">
+                                    {{ "%.2f"|format(row.xirr * 100) if row.xirr is not none else 'n/a' }}%
+                                </span>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </details>
         {% endif %}
 
         <div class="section-header">
@@ -993,6 +1039,14 @@ INSIGHTS_TEMPLATE = """
                 </div>
                 <div class="stats">
                     <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#{{ fund.rank }}</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹{{ fund.cost_value }}</span>
+                    </div>
+                    <div class="stat-item">
                         <span class="stat-label">Market Value</span>
                         <span style="font-weight: 600;">₹{{ fund.market_value }}</span>
                     </div>
@@ -1021,6 +1075,10 @@ INSIGHTS_TEMPLATE = """
                     <span class="status-tag tag-warning">Outside Top 200</span>
                 </div>
                 <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹{{ fund.cost_value }}</span>
+                    </div>
                     <div class="stat-item">
                         <span class="stat-label">Market Value</span>
                         <span style="font-weight: 600;">₹{{ fund.market_value }}</span>
@@ -1293,21 +1351,26 @@ def main():
 
     for p_fund in portfolio_funds:
         isin = str(p_fund.get('isin', '')).strip().upper()
-        # Find if this ISIN or its alternate exists in top results
-        matching_top = next((r for r in top_200_records if str(r.get('isin_growth')).strip().upper() == isin or str(r.get('isin_div_reinvestment')).strip().upper() == isin), None)
+        # Find if this ISIN or its alternate exists in top results and get its rank
+        matching_top_idx = next((idx for idx, r in enumerate(top_200_records, 1) if str(r.get('isin_growth')).strip().upper() == isin or str(r.get('isin_div_reinvestment')).strip().upper() == isin), None)
         
         insight_entry = {
             "scheme_name": p_fund.get('scheme_name'),
             "isin": isin,
+            "cost_value": p_fund.get('cost_value'),
             "market_value": p_fund.get('market_value'),
             "folio": p_fund.get('folio'),
-            "current_nav": p_fund.get('nav')
+            "current_nav": p_fund.get('nav'),
+            "rank": matching_top_idx
         }
         
-        if matching_top:
+        if matching_top_idx:
             top_performers.append(insight_entry)
         else:
             review_list.append(insight_entry)
+
+    # Sort top performers by rank
+    top_performers.sort(key=lambda x: x['rank'])
 
     today_date = as_of.strftime('%Y-%m-%d')
     output_filename = f"report_{today_date}.html"

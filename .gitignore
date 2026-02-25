@@ -2,3 +2,9 @@
 /NAVData
 /Reports
 config.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
