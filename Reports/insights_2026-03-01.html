@@ -1,0 +1,2011 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e293b;
+            --accent: #2563eb;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #334155;
+            --text-muted: #64748b;
+        }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .header {
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            margin-bottom: 32px;
+            border-top: 4px solid var(--accent);
+        }
+        h1 { margin: 0; font-size: 28px; color: var(--primary); }
+        .subtitle { color: var(--text-muted); margin-top: 8px; font-size: 16px; }
+        .section { margin-bottom: 40px; }
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--primary);
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            padding: 24px;
+            margin-bottom: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+        .top-performer { border-left: 4px solid var(--success); }
+        .needs-review { border-left: 4px solid var(--warning); }
+        .status-tag {
+            font-size: 10px;
+            font-weight: 800;
+            padding: 4px 8px;
+            border-radius: 9999px;
+            text-transform: uppercase;
+        }
+        .tag-success { background: #dcfce7; color: #166534; }
+        .tag-warning { background: #fef3c7; color: #92400e; }
+        .fund-name { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+        .isin { font-family: monospace; font-size: 12px; color: var(--text-muted); }
+        .stats { display: flex; gap: 24px; margin-top: 12px; font-size: 14px; }
+        .stat-item { display: flex; flex-direction: column; }
+        .stat-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; font-weight: 600; }
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--accent); text-decoration: none; font-weight: 600; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="report_2026-03-01.html" class="btn-back">← Back to Main Report</a>
+        <div class="header">
+            <h1>Portfolio Insights</h1>
+            <p class="subtitle">Comparing your current holdings with the Top 200 Performing Funds</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <span style="background: var(--success); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">★</span>
+                Top Performers in Portfolio (27)
+            </div>
+            
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">HSLFDG - HDFC Silver ETF Fund of Fund Direct Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF179KC1DU7</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#22</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹1,101.25</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹40.9127</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">P9673 - ICICI Prudential Silver ETF FOF DP Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF109KC1Y98</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#26</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹6,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹12,146.35</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹37.8556</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">P9671 - ICICI Prudential Strategic Metal and Energy Equity Fund of Fund Direct Plan Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF109KC1Z55</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#39</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹1,102.01</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹29.6501</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">123QSGPG - Quantum Gold Savings Fund - Direct Plan Growth</div>
+                        <div class="isin">ISIN: INF082J01150</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#43</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹1,064.21</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹59.0112</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">102IGG1G - LIC MF Gold ETF Fund of Fund (Formerly IDBI MF Gold Fund) FOF - Direct Plan</div>
+                        <div class="isin">ISIN: INF397L01BU4</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#71</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹6,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹8,467.51</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹42.0280</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">LD698G - SBI BSE PSU Bank Index Fund - Direct Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF200KB1688</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#92</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹510.13</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹15.4380</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">K143D - Kotak Global Emerging Market Overseas Equity Omni FOF Direct Plan - Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF174K01LW4</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#96</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹1,006.45</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹37.777</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">127DIGDG - Motilal Oswal Nifty India Defence Index Fund - Direct Growth</div>
+                        <div class="isin">ISIN: INF247L01CW5</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#99</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹499.45</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹10.6250</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">B129Y - Aditya Birla Sun Life Nifty India Defence Index Fund- Direct Growth (Non -Demat)</div>
+                        <div class="isin">ISIN: INF209KC1183</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#101</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹499.47</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹11.5965</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">127CMGDG - Motilal Oswal Nifty Capital Market Index Fund - Direct Plan Growth</div>
+                        <div class="isin">ISIN: INF247L01EB5</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#106</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹497.28</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹11.1020</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">TCMGZ - Tata Nifty Capital Markets Index Fund Direct Plan Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF277KA1CO5</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#107</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹497.29</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹12.7123</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">HHDDGR - HDFC Defence Fund Direct Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF179KC1GI5</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#108</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹499.34</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹25.099</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">127FSGDG - Motilal Oswal Nifty MidSmall Financial Services Index Fund - Direct Plan Growth</div>
+                        <div class="isin">ISIN: INF247L01DW3</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#111</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹1,040.61</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹13.6699</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">IFMAFDG - 360 ONE Multi Asset Allocation Fund - Direct Plan - Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF579M01BM2</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#112</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹1,004.20</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹12.1986</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">127S3GDG - Motilal Oswal BSE Enhanced Value Index Fund - Direct Growth</div>
+                        <div class="isin">ISIN: INF247L01BF2</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#119</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹1,057.63</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹30.2248</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">FTI484 - Franklin Asian Equity Fund - Direct Plan - Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF090I01IZ5</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#120</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹999.64</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹42.8773</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">D785 - DSP Natural Resources and New Energy Fund - Direct Plan - Growth (Non -Demat)</div>
+                        <div class="isin">ISIN: INF740K01QA7</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#121</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹507.01</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹121.295</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">118GCD1G - Edelweiss Greater China Equity Off-shore Fund - Direct Plan Growth</div>
+                        <div class="isin">ISIN: INF843K01AU1</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#126</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹1,015.57</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹62.973</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">118EDD1G - Edelweiss Europe Dynamic Equity Off-shore Fund - Direct Plan Growth</div>
+                        <div class="isin">ISIN: INF843K01GI3</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#127</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹1,005.81</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹32.7563</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">128GCDGG - Axis Greater China Equity Fund of Fund Direct Growth</div>
+                        <div class="isin">ISIN: INF846K01Y39</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#132</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹1,005.22</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹11.44</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">B66Y - Aditya Birla Sun Life PSU Equity Fund Direct-Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF209KB1O82</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#135</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹10,500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹12,164.61</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹41.18</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">120PSD1G - Invesco India PSU Equity Fund - Direct Plan Growth</div>
+                        <div class="isin">ISIN: INF205K01NG5</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#139</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹1,035.21</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹81.68</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">P8182 - ICICI Prudential MidCap Fund - Direct Plan - Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF109K011N7</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#162</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹995.62</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹360.08</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">108ASD2G - UTI Transportation & Logistics Fund - Direct Plan Total 825,699.12 1,121,528.86</div>
+                        <div class="isin">ISIN: INF789F01SH5</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#166</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹491.55</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹335.5260</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">116FIDGG - Bank of India Manufacturing and Infrastructure Fund - Direct Growth</div>
+                        <div class="isin">ISIN: INF761K01702</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#167</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹993.33</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹70.18</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">LD094G - SBI Comma Fund - Direct Plan - Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF200K01SB6</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#170</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹498.14</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹123.7931</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card top-performer">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">120BFD1G - Invesco India Financial Services Fund - Direct Plan Growth</div>
+                        <div class="isin">ISIN: INF205K01KY4</div>
+                    </div>
+                    <span class="status-tag tag-success">Top Performer</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Rank</span>
+                        <span style="font-weight: 600; color: var(--accent);">#196</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹495.67</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Current NAV</span>
+                        <span style="font-weight: 600;">₹177.15</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <span style="background: var(--warning); color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px;">!</span>
+                Portfolio Funds to Review (48)
+            </div>
+            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 16px;">These funds are in your portfolio but did not make it into the overall Top 200 best performing funds based on 12M XIRR.</p>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">101ETDGG - Canara Robeco ELSS Tax Saver Fund - Direct Growth</div>
+                        <div class="isin">ISIN: INF760K01EL8</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹27,100.280</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹72,927.01</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">1074030724/0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">101SCDGG - Canara Robeco Small Cap Fund - Direct Growth</div>
+                        <div class="isin">ISIN: INF760K01JC6</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹20,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹20,306.51</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">17760715504/0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">101CFDGG - Canara Robeco Consumer Trends Fund - Direct Growth</div>
+                        <div class="isin">ISIN: INF760K01DU1</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹13,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹13,139.69</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">17760715504/0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">101INDGG - Canara Robeco Infrastructure Fund - Direct Growth</div>
+                        <div class="isin">ISIN: INF760K01FO9</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹13,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹14,014.53</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">17760715504/0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">D869 - DSP Nifty Next 50 Index Fund - Dir - Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF740KA1MG9</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹9,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹9,275.90</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">9581524/20</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">D922 - DSP Nifty Private Bank Index Fund - Direct - Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF740KA1VN6</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹3,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹3,171.51</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">9581524/20</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">D788 - DSP Small Cap Fund - Direct Plan - Growth (formerly DSP Micro Cap Fund) (Non-Demat)</div>
+                        <div class="isin">ISIN: INF740K01QD1</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹8,250.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹8,570.90</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">9593046/83</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">118UTD1G - Edelweiss US Technology Equity Fund of Fund - Direct Plan Growth</div>
+                        <div class="isin">ISIN: INF754K01LB7</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹958.08</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">91043722912/0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">HGFG1G - HDFC Large and Mid Cap Fund - Direct Growth Plan (formerly HDFC Large Cap Fund) (Non-Demat)</div>
+                        <div class="isin">ISIN: INF179KA1RQ7</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹17,500.090</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹121,184.94</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">6755357/42</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">H32T - HDFC ELSS Tax saver- Direct Plan - Growth Option (Non-Demat)</div>
+                        <div class="isin">ISIN: INF179K01YS4</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹30,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹134,946.36</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">6755357/42</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">HMTOGT - HDFC Corporate Bond Fund - Direct Plan - Growth Option (formerly HDFC Medium term Opportunities Fund, erstwhile HDFC Gilt Fund Short Term,HDFC Floating Rate Income Fund - Long Term Plan merged) (Non-Demat)</div>
+                        <div class="isin">ISIN: INF179K01XD8</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹24,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹25,711.12</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">27053327/16</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">HACG1G - HDFC Small Cap Fund - Direct Growth Plan (Non-Demat)</div>
+                        <div class="isin">ISIN: INF179KA1RW5</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹32,500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹33,358.51</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">27053327/16</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">HHNEDG - HDFC Nifty Top 20 Equal Weight Index Fund Direct Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF179KC1JI9</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹1,544.77</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">27053327/16</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">HHREDP - HDFC Retirement Savings Fund - Equity Plan - Direct Plan -Growth Option (Non-Demat)</div>
+                        <div class="isin">ISIN: INF179KB1MF0</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹7,500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹8,280.37</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">27053327/16</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">HMCOGT - HDFC Mid Cap Fund - Direct Plan - Growth Option (Non-Demat)</div>
+                        <div class="isin">ISIN: INF179K01XQ0</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹23,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹25,778.46</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">27053327/16</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">HCORGT - HDFC Focused Fund - Direct Plan - Growth Option (formerly HDFC Core and Satellite Fund) (Non-Demat)</div>
+                        <div class="isin">ISIN: INF179K01VK7</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹27,500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹30,193.74</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">27053327/16</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">HGFGT - HDFC Balanced Advantage Fund - Direct Plan - Growth Option (formerly HDFC Growth Fund, erstwhile HDFC Prudence Fund merged) (Non-Demat)</div>
+                        <div class="isin">ISIN: INF179K01WA6</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹21,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹22,777.01</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">27053327/16</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">H44T - HDFC Large Cap Fund - Direct Plan - Growth Option (formerly HDFC Top 100 Fund) (Non-Demat)</div>
+                        <div class="isin">ISIN: INF179K01YV8</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹20,500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹21,931.21</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">27053327/16</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">H02T - HDFC Flexi Cap Fund - Direct Plan - Growth Option (Non-Demat)</div>
+                        <div class="isin">ISIN: INF179K01UT0</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹995.36</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">27053327/16</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">OHLEG - HSBC Large & Mid Cap Fund - Direct Growth (Formerly known as HSBC Large and Midcap Equity Fund Direct Plan Growth) (Non-Demat)</div>
+                        <div class="isin">ISIN: INF336L01NV5</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹9,461.220</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹9,377.44</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">11278330/02</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">OHEFG - HSBC Large Cap Fund - Direct Growth (Formerly known as HSBC Large cap Equity Fund - Growth Direct Plan) (Formerly HSBC Equity Fund) (Non-Demat)</div>
+                        <div class="isin">ISIN: INF336L01CM7</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹24,209.080</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹24,675.82</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">11278330/02</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">OLEBDG - HSBC Small Cap Fund - Direct Growth (Formerly known as L&T Emerging Businesses Fund Direct Growth) (Non -Demat)</div>
+                        <div class="isin">ISIN: INF917K01QA1</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹27,500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹26,691.39</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">20354272/42</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">P8078 - ICICI Prudential Corporate Bond Fund - Direct Plan - Growth (formerly ICICI Prudential Ultra Short Term Plan) (Non -Demat)</div>
+                        <div class="isin">ISIN: INF109K016B1</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹24,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹25,876.04</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">31149674/02</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">P8042 - ICICI Prudential Large Cap Fund (erstwhile Bluechip Fund) - Direct Plan - Growth (formerly ICICI Prudential Focused Bluechip Equity Fund) (Non-Demat)</div>
+                        <div class="isin">ISIN: INF109K016L0</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹34,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹36,464.75</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">31149674/02</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">P8133 - ICICI Prudential US Bluechip Equity Fund - Direct Plan - Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF109K01Z71</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹15,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹18,948.94</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">31149674/02</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">P8034 - ICICI Prudential Smallcap Fund - Direct Plan - Growth (formerly ICICI Prudential Indo Asia Equity Fund) (Non -Demat)</div>
+                        <div class="isin">ISIN: INF109K015M0</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹6,500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹6,538.99</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">31149674/02</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">P8017 - ICICI Prudential Equity & Debt Fund - Direct Plan - Growth (formerly ICICI Prudential Balanced Fund) (Non-Demat)</div>
+                        <div class="isin">ISIN: INF109K01Y07</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹21,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹23,569.48</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">31149674/02</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">P9656 - ICICI Prudential NASDAQ 100 Index Fund - Direct Plan - Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF109KC1U50</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹964.72</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">31149674/02</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">P8176 - ICICI Prudential Value Fund (erstwhile Value Discovery Fund) - Direct Plan - Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF109K012K1</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹20,100.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹21,171.91</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">31149674/02</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">P8030 - ICICI Prudential Multicap Fund - Direct Plan - Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF109K014O9</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹20,500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹22,117.61</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">31149674/02</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">120MCD1G - Invesco India Midcap Fund - Direct Plan Growth</div>
+                        <div class="isin">ISIN: INF205K01MV6</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹491.17</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">31041912303/0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">K123D - Kotak Midcap Fund- Direct Plan - Growth (Erstwhile Kotak Emerging Equity Scheme) (Non-Demat)</div>
+                        <div class="isin">ISIN: INF174K01LT0</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹6,500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹6,911.75</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">15646701/40</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">127MPGDG - Motilal Oswal Nifty Microcap 250 Index Fund - Direct Plan Growth</div>
+                        <div class="isin">ISIN: INF247L01BQ9</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹16,500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹15,460.86</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">91019177616/0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">127MFGDG - Motilal Oswal Focused Fund - Direct Plan Growth</div>
+                        <div class="isin">ISIN: INF247L01189</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹21,900.530</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹23,359.02</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">91019177616/0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">127FMGDG - Motilal Oswal Midcap Fund - Direct Plan Growth</div>
+                        <div class="isin">ISIN: INF247L01445</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹29,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹27,718.08</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">91019177616/0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">RMFSCAGG - NIPPON INDIA SMALL CAP FUND - DIRECT GROWTH PLAN GROWTH OPTION</div>
+                        <div class="isin">ISIN: INF204K01K15</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹14,750.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹14,710.17</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">477320100701/0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">RMFGFAGG - NIPPON INDIA GROWTH MID CAP FUND - DIRECT GROWTH PLAN GROWTH OPTION</div>
+                        <div class="isin">ISIN: INF204K01E54</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹30,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹33,832.56</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">477320100701/0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">RMFGSAGG - NIPPON INDIA VISION LARGE & MID CAP FUND - DIRECT GROWTH PLAN GROWTH OPTION</div>
+                        <div class="isin">ISIN: INF204K01F20</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹3,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹3,258.74</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">477320100701/0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">PP001ZG - Parag Parikh Flexi Cap Fund - Direct Plan Growth (formerly Parag Parikh Long Term Value Fund) (Non-Demat)</div>
+                        <div class="isin">ISIN: INF879O01027</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹30,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹31,990.47</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">14539241</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">166OFDGG - quant Mid Cap Fund - Direct Plan</div>
+                        <div class="isin">ISIN: INF966L01887</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹7,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹6,064.07</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">51054574946/0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">166IBDGG - quant Small Cap Fund - Direct Plan Growth</div>
+                        <div class="isin">ISIN: INF966L01689</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹1,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹1,014.50</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">51054574946/0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">166IBDGG - quant Small Cap Fund - Direct Plan Growth</div>
+                        <div class="isin">ISIN: INF966L01689</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹7,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹6,599.74</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">51060066151/0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">LD034G - SBI Technology Opportunities Fund Direct Growth (formerly SBI IT Fund) (Non-Demat)</div>
+                        <div class="isin">ISIN: INF200K01RV6</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹37,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹36,153.50</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">36444497</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">LD346G - SBI Small Cap Fund Direct Growth (formerly SBI Small & Midcap Fund) (Non -Demat)</div>
+                        <div class="isin">ISIN: INF200K01T51</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹15,927.920</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹15,733.03</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">36444497</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">LD055A - SBI Nifty Index Fund - Direct Plan - Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF200K01TE8</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹18,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹19,246.44</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">36444497</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">LD033G - SBI Consumption Opportunities Fund Direct Growth (formerly SBI FMCG Fund) (Non-Demat)</div>
+                        <div class="isin">ISIN: INF200K01RM5</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹16,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹15,209.66</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">36444497</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">176MCDG - SUNDARAM MID CAP FUND DIRECT GROWTH</div>
+                        <div class="isin">ISIN: INF903J01MJ3</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹10,000.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹11,137.90</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">61010910194/0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card needs-review">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                    <div>
+                        <div class="fund-name">TSCFGZ - Tata Small Cap Fund - Direct Plan - Growth (Non-Demat)</div>
+                        <div class="isin">ISIN: INF277K011O1</div>
+                    </div>
+                    <span class="status-tag tag-warning">Outside Top 200</span>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Cost Value</span>
+                        <span style="font-weight: 600;">₹16,500.000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Market Value</span>
+                        <span style="font-weight: 600;">₹14,973.57</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Folio</span>
+                        <span style="font-weight: 600;">10529826/27</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
